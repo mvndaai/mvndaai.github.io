@@ -1,10 +1,8 @@
 require 'selenium-webdriver'
 
-#driver = Selenium::WebDriver.for :firefox
-#driver = Selenium::WebDriver.for :chrome, :switches => %w[--disable-popup-blocking --disable-translate]
-#driver = Selenium::WebDriver.for :safari
-#driver = Selenium::WebDriver.for :chrome
-driver.navigate.to "http://google.com"
+driver = Selenium::WebDriver.for :firefox
+
+driver.navigate.to "http://mvndaai.github.io/selenium/index.html"
 
 element = driver.find_element(:name, 'q')
 element.send_keys "Selenium Tutorials"
