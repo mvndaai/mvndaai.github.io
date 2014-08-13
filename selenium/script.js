@@ -10,6 +10,7 @@ $( document ).ready(function() {
   $("#button").click( function(){
     count++;
     updateCount();
+    alert('You clicked the button');
    });
 
 });

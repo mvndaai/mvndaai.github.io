@@ -4,9 +4,14 @@ driver = Selenium::WebDriver.for :firefox
 
 driver.navigate.to "http://mvndaai.github.io/selenium/index.html"
 
-element = driver.find_element(:name, 'q')
-element.send_keys "Selenium Tutorials"
-element.submit
+text = driver.find_element(:id, 'text')
+text.send_keys "Selenium Tutorial"
+
+checkbox = driver.find_element(:for, 'checkbox_2')
+checkbox.click
+
+sleep 10
+
 
 driver.quit
 
