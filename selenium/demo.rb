@@ -1,11 +1,14 @@
 require 'selenium-webdriver'
 
-@slow = true
+#@slow = true
 
 driver = Selenium::WebDriver.for :firefox
 begin
   driver.navigate.to "http://mvndaai.github.io/selenium/index.html"
   sleep 1 if @slow
+
+  header = driver.find_element(:css, 'h1')
+  puts "Header: #{header.text}"
 
   text = driver.find_element(:id, 'text')
   text.send_keys "Text to clear"
@@ -26,9 +29,10 @@ begin
   selector.click
   sleep 1 if @slow
 
+  puts "Hidden Section: #{!driver.find_element(:id,"hide").displayed?}"
   javascript = "document.getElementById('hide').style.display = 'none';"
   driver.execute_script(javascript)
-  #element.displayed?
+  puts "Hidden Section: #{!driver.find_element(:id,"hide").displayed?}"
   sleep 1 if @slow
 
   button = driver.find_element(:css, '#button')
