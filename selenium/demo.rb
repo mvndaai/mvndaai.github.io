@@ -26,6 +26,12 @@ begin
   selector.click
   #sleep 1
 
+  #javascript = 'document.getElementById(hide).style.display = 'none';'
+  javascript = '$("#hide").hide();'
+  puts driver.execute_script(javascript)
+  sleep 3
+
+
   button = driver.find_element(:css, '#button')
   button.click
   #sleep 1
