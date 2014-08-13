@@ -46,6 +46,8 @@ begin
   bottom = driver.find_element(:id, 'bottom')
   bottom.location_once_scrolled_into_view
   sleep 1
+  top = driver.find_element(:id, 'top')
+  top.location_once_scrolled_into_view
 
   driver.manage.window.move_to(300, 400)
   sleep 1
