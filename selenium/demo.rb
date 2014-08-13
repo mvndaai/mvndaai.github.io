@@ -1,6 +1,6 @@
 require 'selenium-webdriver'
 
-#@slow = true
+@slow = true
 
 driver = Selenium::WebDriver.for :firefox
 begin
