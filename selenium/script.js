@@ -12,5 +12,4 @@ $( document ).ready(function() {
     updateCount();
     alert('You clicked the button');
    });
-
 });
