@@ -28,12 +28,16 @@ $( document ).ready(function() {
     update();
   });
 
+  $('.item_local').click(function() {
+    alert(this);
+  });
+
 
   function update(){
     var local_text = "";
     for (var i = 0; i < localStorage.length; i++) {
       var key = localStorage.key(i);
-      local_text +=  "</br>"+ key + "=" + localStorage[key];
+      local_text +=  "<span class='item_local'></br>"+ key + "=" + localStorage[key]+ "</span>";
     }
 
     var cookie_text = "";
