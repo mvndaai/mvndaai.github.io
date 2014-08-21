@@ -30,9 +30,8 @@ $( document ).ready(function() {
 
   $(".item_local").click(function() {
     var key = $(this);//.split("=")[0];
+    key = key.text().split("=")[0];
     console.log(key);
-    console.log(key.text());
-    console.log(key.html());
   });
 
 
