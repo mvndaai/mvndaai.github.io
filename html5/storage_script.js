@@ -29,6 +29,12 @@ $( document ).ready(function() {
       var key = localStorage.key(i);
       local_text +=  "</br>key: "+ key + " | value: " + localStorage[key];
     }
+
+    var cookie_text = "";
+    for (var i = 0; i < cookies.length; i++)
+      cookie_text += "</br>"cookies[i];
+
+
     $("#local_box").html(local_text);
     $("#cookie_box").html(document.cookie);
 
