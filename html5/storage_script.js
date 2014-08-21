@@ -31,6 +31,7 @@ $( document ).ready(function() {
     }
 
     var cookie_text = "";
+    var cookies = document.cookie.split(";");
     for (var i = 0; i < cookies.length; i++)
       cookie_text += "</br>"+cookies[i];
 
