@@ -47,6 +47,8 @@ $( document ).ready(function() {
     var value = $("#value").val();
     var type = $('input[name="type"]:checked').val();
 
+    if(key == '')
+      break;
     console.log("key:", key, "| value:", value, "| type:", type);
 
     if(type === 'local'){
