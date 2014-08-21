@@ -32,7 +32,7 @@ $( document ).ready(function() {
 
     var cookie_text = "";
     for (var i = 0; i < cookies.length; i++)
-      cookie_text += "</br>"cookies[i];
+      cookie_text += "</br>"+cookies[i];
 
 
     $("#local_box").html(local_text);
