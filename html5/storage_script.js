@@ -30,7 +30,7 @@ $( document ).ready(function() {
       local_text +=  "</br>key: "+ key + " | value: " + localStorage[key];
     }
     $("#local_box").html(local_text);
-    $("#cookie_box")html(document.cookie);
+    $("#cookie_box").html(document.cookie);
 
 
     console.log(localStorage);
