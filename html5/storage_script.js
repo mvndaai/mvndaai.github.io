@@ -32,6 +32,7 @@ $( document ).ready(function() {
     var key = $(this);//.split("=")[0];
     key = key.text().split("=")[0];
     localStorage.removeItem(key);
+    update();
   });
 
 
