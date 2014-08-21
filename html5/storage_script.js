@@ -25,7 +25,7 @@ $( document ).ready(function() {
     var local_text = "";
     for (var i = 0; i < localStorage.length; i++) {
       var key = localStorage.key(i);
-      local_text +=  "</br>key: "+ key + " | value: " + localStorage[key];
+      local_text +=  "</br>"+ key + "=" + localStorage[key];
     }
 
     var cookie_text = "";
