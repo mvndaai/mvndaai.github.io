@@ -14,13 +14,11 @@ $( document ).ready(function() {
 
   $("#clearCookie").click(function(){
     var cookies = document.cookie.split(";");
-    for (var i = 0; i < cookies.length; i++)
+    for (var i = 0; i < cookies.length; i++){
       eraseCookie(cookies[i].split("=")[0]);
+    }
     update();
   });
-
-
-
 
 
   function update(){
@@ -66,6 +64,10 @@ $( document ).ready(function() {
   	}
   	else var expires = "";
   	document.cookie = name+"="+value+expires+"; path=/";
+  }
+
+  function eraseCookie(name) {
+    createCookie(name,"",-1);
   }
 
 
