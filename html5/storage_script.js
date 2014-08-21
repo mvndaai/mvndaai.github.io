@@ -28,7 +28,7 @@ $( document ).ready(function() {
     update();
   });
 
-  $('.item_local').click(function() {
+  $(".item_local").click(function() {
     alert(this);
   });
 
