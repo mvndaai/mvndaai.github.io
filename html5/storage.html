@@ -1,0 +1,35 @@
+<HTML>
+  <Head>
+    <title>Web Storage</title>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>
+   <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="storage_script.js" type="text/javascript"></script>
+  </Head>
+
+  <Body>
+    <h1>Persistant Web Storage</h1>
+    <div class=block>
+
+      Key<input id="key" type="text">
+      Value<input id="value" type="text">
+
+      <input id="local" type="radio" value="local" name="type" checked>
+      <label for="local">Local Storage</label>
+      <input id="cookie" type="radio" value="cookie" name="type">
+      <label for="cookie">Cookie</label>
+
+      <span id='store' class="button">store</span>
+    </div>
+
+    <div class=block>Localstorage
+      <span id=local_box></span>
+      </br><span class="button right" id="clearLocal">clear</span></br>
+    </div>
+
+    <div class=block>Cookies
+      <span id="cookie_box"></span>
+      </br><span class="button right" id="clearCookie">clear</span></br>
+    </div>
+
+  </Body>
+</HTML>
