@@ -20,6 +20,7 @@ body {
   padding: 0 1% 0 1%;
   border: 2px solid black;
   border-radius: 20%;
+  font-size: small;
 
   //Block highlighting
   -webkit-touch-callout: none;
