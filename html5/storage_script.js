@@ -29,8 +29,8 @@ $( document ).ready(function() {
   });
 
   $(".item_local").click(function() {
-    var key = this.text().split("=")[0];
-    alert(key);
+    var key = this.content().split("=")[0];
+    console.log(key);
   });
 
 
