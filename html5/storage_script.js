@@ -15,7 +15,6 @@ $( document ).ready(function() {
     }
   });
 
-
   $("#clearLocal").click(function(){
     localStorage.clear();
     update();
