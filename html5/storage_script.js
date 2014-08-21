@@ -29,11 +29,23 @@ $( document ).ready(function() {
   });
 
   $(".item_local").click(function() {
-    var key = $(this);//.split("=")[0];
+    var key = $(this);
     key = key.text().split("=")[0];
     localStorage.removeItem(key);
+    console.log("LocalStorage Deleted: "+key)
     update();
   });
+
+  $(".item_cookie").click(function() {
+    var key = $(this);
+    key = key.text().split("=")[0];
+    eraseCookie(key);
+    console.log("Cookie Deleted: "+key)
+    update();
+  });
+
+
+
 
 
   function update(){
@@ -46,7 +58,7 @@ $( document ).ready(function() {
     var cookie_text = "";
     var cookies = document.cookie.split(";");
     for (var i = 0; i < cookies.length; i++)
-      cookie_text += "</br>"+cookies[i];
+      cookie_text += "<span class='item_cookie'></br>"+cookies[i]+"</span>";
 
 
     $("#local_box").html(local_text);
