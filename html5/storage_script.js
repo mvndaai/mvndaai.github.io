@@ -73,7 +73,7 @@ $( document ).ready(function() {
       console.log("key:", key, "| value:", value, "| type:", type);
       if(type === 'local'){
         localStorage[key]=value;
-        update_cookies();
+        update_localStorage();
       }else{
         createCookie(key,value,10)
         update_cookies();
