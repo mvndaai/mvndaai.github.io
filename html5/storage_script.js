@@ -1,23 +1,20 @@
 $( document ).ready(function() {
-
+  //Bug, you can only click on one item at a time to delete
   update();
 
   $("#store").click(function() {
     store_values();
-    update();
   });
 
   $(document).keypress(function(e) {
-    if(e.which == 13) {
-        //alert('You pressed enter!');
-        store_values();
-        update();
+    if(e.which == 13) { //alert('You pressed enter!');
+      store_values();
     }
   });
 
   $("#clearLocal").click(function(){
     localStorage.clear();
-    update();
+    update_localStorage();
   });
 
   $("#clearCookie").click(function(){
@@ -25,7 +22,7 @@ $( document ).ready(function() {
     for (var i = 0; i < cookies.length; i++){
       eraseCookie(cookies[i].split("=")[0]);
     }
-    update();
+    update_cookies();
   });
 
   $(".item_local").click(function() {
@@ -33,7 +30,7 @@ $( document ).ready(function() {
     key = key.text().split("=")[0];
     localStorage.removeItem(key);
     console.log("LocalStorage Deleted: "+key)
-    update();
+    update_localStorage();
   });
 
   $(".item_cookie").click(function() {
@@ -41,31 +38,29 @@ $( document ).ready(function() {
     key = key.text().split("=")[0];
     eraseCookie(key);
     console.log("Cookie Deleted: "+key)
-    update();
+    update_cookies();
   });
 
-
-
-
-
   function update(){
+    update_localStorage();
+    update_cookies();
+  }
+  function update_localStorage(){
     var local_text = "";
     for (var i = 0; i < localStorage.length; i++) {
       var key = localStorage.key(i);
       local_text +=  "<span class='item_local'></br>"+ key + "=" + localStorage[key]+ "</span>";
     }
+    $("#local_box").html(local_text);
+    console.log(localStorage);
+  }
 
+  function update_cookies(){
     var cookie_text = "";
     var cookies = document.cookie.split(";");
     for (var i = 0; i < cookies.length; i++)
       cookie_text += "<span class='item_cookie'></br>"+cookies[i]+"</span>";
-
-
-    $("#local_box").html(local_text);
     $("#cookie_box").html(cookie_text);
-
-
-    console.log(localStorage);
     console.log(document.cookie);
   }
 
@@ -78,8 +73,10 @@ $( document ).ready(function() {
       console.log("key:", key, "| value:", value, "| type:", type);
       if(type === 'local'){
         localStorage[key]=value;
+        update_cookies();
       }else{
         createCookie(key,value,10)
+        update_cookies();
       }
     }
   }
