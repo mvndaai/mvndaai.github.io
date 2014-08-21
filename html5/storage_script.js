@@ -7,6 +7,15 @@ $( document ).ready(function() {
     update();
   });
 
+  $(document).keypress(function(e) {
+    if(e.which == 13) {
+        //alert('You pressed enter!');
+        store_values();
+        update();
+    }
+  });
+
+
   $("#clearLocal").click(function(){
     localStorage.clear();
     update();
