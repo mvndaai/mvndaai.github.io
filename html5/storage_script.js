@@ -37,7 +37,7 @@ $( document ).ready(function() {
 
 
     $("#local_box").html(local_text);
-    $("#cookie_box").html(document.cookie);
+    $("#cookie_box").html(cookie_text);
 
 
     console.log(localStorage);
