@@ -29,7 +29,7 @@ $( document ).ready(function() {
   });
 
   $(".item_local").click(function() {
-    var key = this.html;//.split("=")[0];
+    var key = $(this).html;//.split("=")[0];
     console.log(key);
   });
 
