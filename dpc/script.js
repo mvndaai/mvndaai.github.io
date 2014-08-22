@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 
 
-  var get_tenants = localStorage["server"]+":"+localStorage["port"]+"/iam/tenants"
+  var get_tenants = "http://"+localStorage["server"]+":"+localStorage["port"]+"/iam/tenants"
 
   alert(get_tenants);
   $.get( get_tenants, function( data ) {
