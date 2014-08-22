@@ -2,6 +2,7 @@ $( document ).ready(function() {
 
 
   var get_tenants = localStorage["server"]+":"+localStorage["port"]+"/iam/tenants"
+
   alert(get_tenants);
   $.get( get_tenants, function( data ) {
     alert( "Data Loaded: " + data );
@@ -19,8 +20,8 @@ $( document ).ready(function() {
   });
 
   $("#config_save").click(function() {
-    localStorage["server"]=$("#server").val();
-    localStorage["port"]=$("#port").val();
+    localStorage["server"]=$.trim($("#server").val());
+    localStorage["port"]=$.trim($("#port").val());
     console.log("Server:",localStorage["server"],":",localStorage["port"]);
     refresh_server();
 
