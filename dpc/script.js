@@ -1,12 +1,18 @@
 $( document ).ready(function() {
 
-
-  var get_tenants = "http://"+localStorage["server"]+":"+localStorage["port"]+"/iam/tenants"
-
-  alert(get_tenants);
-  $.get( get_tenants, function( data ) {
-    alert( "Data Loaded: " + data );
-  });
+  get_tenants();
+  function get_tenants(){
+    var uri = "http://"+localStorage["server"]+":"+localStorage["port"]+"/iam/tenants"
+    console.log("Uri: "+uri)
+    //$.get( uri, function(data, status, xhr) {
+    $.getJSON( uri, function( data ) {
+      //console.log(data);
+      //console.log(xhr);
+      //console.log("Header: "+xhr.responseText());
+      //console.log("Status: "+status);
+      console.log(data);
+    });
+  }
 
 
 
