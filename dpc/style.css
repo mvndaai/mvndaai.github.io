@@ -2,9 +2,6 @@
   font-size: x-large;
 }
 
-
-
-
 .button{
   padding: 0 1% 0 1%;
   border: 2px solid black;
@@ -23,6 +20,13 @@
 .button:hover{
 background-color:grey;
 }
+
 .button:active{
 background-color:#6495ED;
+}
+
+.section{
+  padding: 1px 1px 1px 1px;
+  border: 2px soldid black;
+  border-radius: 15px;
 }

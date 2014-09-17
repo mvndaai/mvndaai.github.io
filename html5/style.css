@@ -37,3 +37,12 @@ body {
 .button:active{
 	background-color:#6495ED;
 }
+
+.codebox {
+    /* Below are styles for the codebox (not the code itself) overflow:auto;*/
+    border:1px solid black;
+    background-color:#EEEEFF;
+    width:300px;
+    padding:10px;
+    font-family: Consolas,monospace
+}
