@@ -65,9 +65,8 @@ begin
   sleep 1 if @slow
 
   driver.execute_script("alert('You made it to the end');")
-  sleep 3
+  sleep 3 if @slow
   driver.switch_to.alert.accept
-
 
 rescue => e
   puts "Error: #{e}"

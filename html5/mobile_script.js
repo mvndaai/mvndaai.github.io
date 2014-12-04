@@ -14,14 +14,14 @@ $( document ).ready(function() {
 
     $("#current").html(
       "Device is moblile: "+isMobileDevice()
-      +"</br> Serving mobile page:"+serverMobile()
-      );
+      +"</br>Serving mobile page:"+serverMobile()
+    );
 
 
     if (isLocal()){
-      console.log("This page is local");
+      //console.log("This page is local");
     }else{
-      console.log("This page is online");
+      //console.log("This page is online");
     }
 
   }
@@ -43,12 +43,15 @@ $( document ).ready(function() {
 
   function serverMobile(){
     if (isMobileDevice()){
-      if(key in localStorage)
+      if(key in localStorage){
         return false;
+      }
       return true;
     }else{//Desktop
-      if (key in localStorage)
+      if (key in localStorage){
+        console.log('Hello friends')
         return true;
+      }
       return false;
     }
   }
