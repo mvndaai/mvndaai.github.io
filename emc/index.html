@@ -1,7 +1,64 @@
-<h3>This is just a list of links for me</h3>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>
+    <script>
+      $( document ).ready(function() {
+        var localKey = 'dynamicLinks';
+        console.log("dynamicLinks: " + localStorage[localKey]);
 
-<a href='http://console.dev.dpccloud.com/'>dpc production</a>
-<br><a href='http://107.178.254.97/'>dpc integration</a>
-<br><a href='http://localhost'>localhost</a>
-<br>
-<br><a href='a.ckey'>My ckey</a>
+        function addDynamicLinks(){
+          $("#dynamicList").html('');
+
+          if (typeof localStorage[localKey] !== "undefined"){
+            var links = localStorage[localKey].split(',');
+            links.forEach(function(link) {
+              link = "<br><a href='" + link + "'>" + link + "</a>";
+              $("#dynamicList").append(link);
+            });
+          }
+        }
+        addDynamicLinks();
+
+
+        $("#clearLinkButton").click(function() {
+          localStorage.removeItem(localKey);
+          addDynamicLinks();
+        });
+
+        $("#addLinkButton").click(function() {
+          var text = $("#addLinkText").val();
+          $("#addLinkText").val('');
+
+          if (text !== ''){
+            if (typeof localStorage[localKey] === "undefined"){
+              localStorage[localKey] = text;
+            }else{
+              localStorage[localKey] = localStorage[localKey] + "," + text;
+            }
+          }
+          addDynamicLinks();
+        });
+
+      });
+    </script>
+  </head>
+
+  <body>
+    <h3>This is just a list of links for me</h3>
+
+    <h4>EMC</h4>
+    <a href='http://console.dev.dpccloud.com/'>dpc production</a>
+    <br><a href='http://107.178.254.97/'>dpc integration</a>
+    <br><a href='http://localhost'>localhost</a>
+    <br><a href='http://jenkins01.tools.mozyops.com/'>Jenkins</a>
+
+    <h4>Mozy</h4>
+    <a href='a.ckey'>My ckey</a>
+
+    <h4>Dynamic Local List</h4>
+    <input id="addLinkText" type="text" name="textfield">
+    <input id='addLinkButton' type="submit" name="submit" value="add">
+    <input id='clearLinkButton' type="submit" name="submit" value="clear">
+    <span id="dynamicList"></span>
+  </body>
+</html>
