@@ -1,10 +1,16 @@
 (function () {
     'use strict';
-    // this function is strict...
 
-  //  function resizeIframe(obj) {
-  //      obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
-  //  }
+    $(document).ready(function () {
+
+
+
+        $('#iframe').css({'height':$('#iframe').width()+'px'});
+
+
+
+    });
+
 
 
 }());
