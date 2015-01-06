@@ -9,28 +9,29 @@ h1 {
   font-family:DancingScript,Helvetica, Arial, sans-serif;
 }
 
-#case {
-  margin: 0 5% 0 5%;
-  float:center;
-  color:grey;
-}
-
-#content {
-  background-color:white;
-  float:center;
-}
-
 .buttonRow {
   color:grey;
 }
 
 .mainBtns {
-  border: 1px solid white;
+  border-color:white;
+  border-style:solid;
   width:25%;
 }
 
 iframe {
   width:85%;
   height:700px;
+  float:center;
+}
+
+.case {
+  margin: 0 5% 0 5%;
+  float:center;
+  color:grey;
+}
+
+.content {
+  background-color:white;
   float:center;
 }
