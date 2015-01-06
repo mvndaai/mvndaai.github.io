@@ -6,7 +6,7 @@
     var sections = {};
     sections.home = ['btnHome', 'contentHome'];
     sections.resume = ['btnResume', 'contentResume'];
-    sections.resume = ['btnWeb', 'contentWeb'];
+    sections.web = ['btnWeb', 'contentWeb'];
 
 
     function resizeIframe() {
