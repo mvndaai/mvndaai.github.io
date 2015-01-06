@@ -9,8 +9,12 @@
         $('#iframe').css({'height': width + 'px'});
     }
 
-    $(document).ready(function () {
+    function onReady() {
         resize_iframe();
+    }
+
+    $(document).ready(function () {
+        onReady();
 
         $(window).resize(function () {
             resize_iframe();

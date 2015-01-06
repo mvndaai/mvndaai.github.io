@@ -18,6 +18,11 @@ h1 {
   width:25%;
 }
 
+.mainBtns:active {
+  background-color:black;
+  color:white;
+}
+
 iframe {
   width:100%;
 }
