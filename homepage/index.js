@@ -16,7 +16,7 @@
     function hideSections() {
         console.log(sections);
         for (var section in sections) {
-            console.log(sections);
+            console.log(section);
         }
 
         //sections.forEach(function (section) {
