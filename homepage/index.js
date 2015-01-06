@@ -38,6 +38,7 @@
     function onReady() {
         resizeIframe();
         hideSections();
+        $("#contentHome").show();
     }
 
     $(document).ready(function () {
@@ -48,8 +49,7 @@
         });
 
         $('.mainBtns').click(function () {
-            console.log(this);
-            console.log(this.id);
+            hideSections();
             showSection(this.id);
         });
     });
