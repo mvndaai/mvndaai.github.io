@@ -15,11 +15,13 @@
 
     function hideSections() {
         console.log(sections);
-        sections.forEach(function (section) {
-            console.log(section);
-            console.log(section[1]);
-            $('#' + section[1]).hide();
-        });
+        for (var section in sections) {
+            console.log(sections);
+        }
+
+        //sections.forEach(function (section) {
+        //    $('#' + section[1]).hide();
+        //});
     }
 
     function onReady() {
