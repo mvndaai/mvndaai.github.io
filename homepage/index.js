@@ -24,6 +24,17 @@
         }
     }
 
+    function showSection(btnId) {
+        var section;
+        for (section in sections) {
+            if (sections.hasOwnProperty(section)) {
+                if (sections[section][0] === btnId) {
+                    $('#' + sections[section][1]).show();
+                }
+            }
+        }
+    }
+
     function onReady() {
         resizeIframe();
         hideSections();
@@ -39,6 +50,7 @@
         $('.mainBtns').click(function () {
             console.log(this);
             console.log(this.id);
+            showSection(this.id);
         });
     });
 }());
