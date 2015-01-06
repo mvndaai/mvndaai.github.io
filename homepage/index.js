@@ -1,16 +1,12 @@
+/*global $, document, alert*/
+
 (function () {
     'use strict';
-
     $(document).ready(function () {
 
-
-
-        $('#iframe').css({'height':$('#iframe').width()+'px'});
-
+        alert("hello");
+        $('#iframe').css({'height': $('#iframe').width() + 'px'});
 
 
     });
-
-
-
 }());
