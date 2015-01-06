@@ -20,7 +20,10 @@ h1 {
 }
 
 iframe {
+  margin-left: auto;
+  margin-right: auto;
   width:85%;
+  clear: both;
   /*height:700px;
   float:center;
   */
@@ -30,10 +33,6 @@ iframe {
   margin-left: auto;
   margin-right: auto;
   width: 90%;
-  /*
-  margin: 0 5% 0 5%;
-  float:center;
-  */
   color:grey;
 }
 
