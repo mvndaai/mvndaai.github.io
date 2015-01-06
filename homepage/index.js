@@ -38,7 +38,7 @@
 
         $('.mainBtns').click(function () {
             console.log(this);
-            console.log(this.attribute('id'));
+            console.log(this.attr("id"));
         });
     });
 }());
