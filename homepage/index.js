@@ -7,6 +7,8 @@
     sections.home = ['btnHome', 'contentHome'];
     sections.resume = ['btnResume', 'contentResume'];
     sections.web = ['btnWeb', 'contentWeb'];
+    sections.fun = ['btnFun', 'contentFun'];
+
 
 
     function resizeIframe() {
@@ -40,6 +42,8 @@
     function onReady() {
         resizeIframe();
         hideSections();
+
+
         $("#contentHome").show();
     }
 
