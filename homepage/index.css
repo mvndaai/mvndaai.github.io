@@ -1,4 +1,3 @@
-@font-face { font-family: DancingScript; src: url('/fonts/DancingScript-Regular.otf'); }
 
 body {
   color:white;
@@ -6,7 +5,7 @@ body {
 
 h1 {
   color:#77c3e7;
-  font-family:DancingScript,Helvetica, Arial, sans-serif;
+  font-family:dancing_script_otregular,Helvetica, Arial, sans-serif;
 }
 
 .buttonRow {
