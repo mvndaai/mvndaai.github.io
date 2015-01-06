@@ -15,8 +15,12 @@
 
     function hideSections() {
         console.log(sections);
-        for (var section in sections) {
-            console.log(section);
+        var section;
+        for (section in sections) {
+            if (sections.hasOwnProperty(section)) {
+                console.log(section);
+            }
+
         }
 
         //sections.forEach(function (section) {
