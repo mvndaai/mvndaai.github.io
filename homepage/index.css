@@ -14,5 +14,9 @@ h1 {
 }
 
 .buttonRow {
-  color:grey
+  color:grey;
+}
+
+.mainButtons {
+  width:25%;
 }
