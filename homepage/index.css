@@ -13,6 +13,10 @@ h1 {
   color:grey;
 }
 
+#content {
+  background-color:white;
+}
+
 .buttonRow {
   color:grey;
 }
