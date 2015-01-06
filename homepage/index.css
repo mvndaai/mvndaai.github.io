@@ -9,6 +9,10 @@ h1 {
     color:#77c3e7;
 }
 
+iframe {
+    width:100%;
+}
+
 .buttonRow {
     color:grey;
 }
@@ -25,10 +29,6 @@ h1 {
 
 .mainBtns:active {
     background-color:black;
-}
-
-iframe {
-    width:100%;
 }
 
 .content {

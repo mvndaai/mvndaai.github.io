@@ -49,6 +49,7 @@
         });
 
         $('.mainBtns').click(function () {
+            resizeIframe();
             hideSections();
             showSection(this.id);
         });
