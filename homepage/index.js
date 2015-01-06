@@ -18,14 +18,10 @@
         var section;
         for (section in sections) {
             if (sections.hasOwnProperty(section)) {
-                console.log("#" + sections[section][1]);
+                //console.log("#" + sections[section][1]);
                 $('#' + sections[section][1]).hide();
             }
         }
-
-        //sections.forEach(function (section) {
-        //    $('#' + section[1]).hide();
-        //});
     }
 
     function onReady() {
@@ -38,6 +34,11 @@
 
         $(window).resize(function () {
             resizeIframe();
+        });
+
+        $('.mainBtns').click(function () {
+            console.log(this);
+            console.log(this.attribute('id'));
         });
     });
 }());
