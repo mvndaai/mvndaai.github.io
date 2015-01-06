@@ -1,11 +1,11 @@
 
 body {
   color:grey;
+  font-family:dancing_script,Helvetica, Arial, sans-serif;
 }
 
 h1 {
   color:#77c3e7;
-  font-family:dancing_script,Helvetica, Arial, sans-serif;
 }
 
 .buttonRow {
@@ -15,7 +15,6 @@ h1 {
 .mainBtns {
   border-color:white;
   border-style:solid;
-  width:25%;
 }
 
 .mainBtns:hover {
