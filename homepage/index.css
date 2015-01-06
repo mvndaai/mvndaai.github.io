@@ -28,3 +28,9 @@ h1 {
   border: 1px solid white;
   width:25%;
 }
+
+iframe {
+  width:85%;
+  height:700px;
+  float:center;
+}
