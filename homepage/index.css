@@ -5,7 +5,7 @@ body {
 
 h1 {
   color:#77c3e7;
-  font-family:dancing_script_otregular,Helvetica, Arial, sans-serif;
+  font-family:dancing_script,Helvetica, Arial, sans-serif;
 }
 
 .buttonRow {
@@ -22,7 +22,6 @@ iframe {
   margin-left: auto;
   margin-right: auto;
   width:85%;
-  clear: both;
 }
 
 .case {
@@ -40,8 +39,4 @@ iframe {
   margin-left: auto;
   margin-right: auto;
   width: 90%;
-}
-
-.clear {
-  clear: both;
 }
