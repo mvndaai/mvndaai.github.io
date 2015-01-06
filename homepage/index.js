@@ -19,7 +19,7 @@
         for (section in sections) {
             if (sections.hasOwnProperty(section)) {
                 console.log("#" + sections[section][1]);
-                $('#' + section[1]).hide();
+                $('#' + sections[section][1]).hide();
             }
         }
 
