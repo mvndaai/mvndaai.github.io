@@ -1,10 +1,12 @@
+@font-face { font-family: DancingScript; src: url('/fonts/DancingScript-Regular.otf'); }
+
 body {
   color:white;
 }
 
 h1 {
   color:#77c3e7;
-  font-family:Helvetica, Arial, sans-serif;
+  font-family:DancingScript,Helvetica, Arial, sans-serif;
 }
 
 #case {
