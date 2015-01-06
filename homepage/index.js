@@ -55,5 +55,7 @@
             showSection(this.id);
             resizeIframe();
         });
+
+        console.log(document.location.hash);
     });
 }());
