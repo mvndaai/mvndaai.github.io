@@ -18,9 +18,8 @@
         var section;
         for (section in sections) {
             if (sections.hasOwnProperty(section)) {
-                console.log(section);
+                $('#' + section[1]).hide();
             }
-
         }
 
         //sections.forEach(function (section) {
