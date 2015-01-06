@@ -17,6 +17,7 @@ h1 {
 
 #content {
   background-color:white;
+  float:center;
 }
 
 .buttonRow {
@@ -26,8 +27,4 @@ h1 {
 .mainBtns {
   border: 1px solid white;
   width:25%;
-}
-
-iframe {
-  float:center;
 }
