@@ -6,6 +6,8 @@
     var sections = {};
     sections.home = ['btnHome', 'contentHome'];
     sections.resume = ['btnResume', 'contentResume'];
+    sections.resume = ['btnWeb', 'contentWeb'];
+
 
     function resizeIframe() {
         var width = $('#iframe').width() * (11 / 8.5);
