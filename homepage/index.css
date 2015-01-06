@@ -18,9 +18,13 @@ h1 {
   width:25%;
 }
 
-.mainBtns:active {
+.mainBtns:hover {
   background-color:black;
   color:white;
+}
+
+.mainBtns:active {
+  background-color:black;
 }
 
 iframe {
