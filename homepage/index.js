@@ -18,6 +18,7 @@
         var section;
         for (section in sections) {
             if (sections.hasOwnProperty(section)) {
+                console.log("#" + section[1]);
                 $('#' + section[1]).hide();
             }
         }
