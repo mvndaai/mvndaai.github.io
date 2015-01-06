@@ -21,6 +21,7 @@
     }
 
     function onReady() {
+        console.log(sections);
         resizeIframe();
         hideSections();
     }
