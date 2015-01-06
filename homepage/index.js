@@ -14,7 +14,7 @@
     }
 
     function hideSections() {
-        console.log(sections);
+        //console.log(sections);
         var section;
         for (section in sections) {
             if (sections.hasOwnProperty(section)) {
@@ -38,7 +38,7 @@
 
         $('.mainBtns').click(function () {
             console.log(this);
-            console.log(this.attr("id"));
+            console.log(this.id);
         });
     });
 }());
