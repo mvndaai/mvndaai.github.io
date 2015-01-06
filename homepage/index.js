@@ -14,6 +14,7 @@
     }
 
     function hideSections() {
+        console.log(sections);
         sections.forEach(function (section) {
             console.log(section);
             console.log(section[1]);
@@ -22,7 +23,6 @@
     }
 
     function onReady() {
-        console.log(sections);
         resizeIframe();
         hideSections();
     }
