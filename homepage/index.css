@@ -7,9 +7,9 @@ h1 {
   font-family:Helvetica, Arial, sans-serif;
 }
 
-#everything {
+#case {
+  margin: 0 5% 0 5%;
   float:center;
-  width:90%;
   color:grey;
 }
 
@@ -17,7 +17,7 @@ h1 {
   color:grey;
 }
 
-.mainButtons {
+.mainBtns {
   border: 1px solid white;
   width:25%;
 }
