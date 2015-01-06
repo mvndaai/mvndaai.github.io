@@ -1,4 +1,4 @@
-/*global $, document, window, alert*/
+/*global $, document, window, alert, console*/
 
 (function () {
     'use strict';
@@ -15,6 +15,7 @@
 
     function hideSections() {
         sections.forEach(function (section) {
+            console.log(section[1]);
             $('#' + section[1]).hide();
         });
     }
