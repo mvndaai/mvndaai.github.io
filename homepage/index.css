@@ -21,8 +21,11 @@ h1 {
 
 iframe {
   width:85%;
-  /*height:700px;*/
+  /*height:700px;
   float:center;
+  */
+  overflow:hidden;
+  height:1%;
 }
 
 .case {
