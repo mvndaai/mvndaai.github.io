@@ -1,6 +1,6 @@
 
 body {
-  color:white;
+  color:grey;
 }
 
 h1 {
@@ -19,16 +19,7 @@ h1 {
 }
 
 iframe {
-  margin-left: auto;
-  margin-right: auto;
-  width:85%;
-}
-
-.case {
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
-  color:grey;
+  width:100%;
 }
 
 .content {
