@@ -4,7 +4,9 @@
     'use strict';
 
     function resize_iframe() {
-        $('#iframe').css({'height': $('#iframe').width() * (11 / 8.5) + 'px'});
+        var width = $('#iframe').width() * (11 / 8.5);
+        if (width > 1080) { width = 1080; }
+        $('#iframe').css({'height': width + 'px'});
     }
 
     $(document).ready(function () {
