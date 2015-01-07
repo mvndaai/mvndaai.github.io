@@ -9,11 +9,7 @@
     sections.web = ['btnWeb', 'contentWeb'];
     sections.fun = ['btnFun', 'contentFun'];
 
-
-    //
-
     function chooseSectionByUrl() {
-        //console.log(document.location.hash);
         var section;
         for (section in sections) {
             if (sections.hasOwnProperty(section)) {
@@ -33,11 +29,9 @@
     }
 
     function hideSections() {
-        //console.log(sections);
         var section;
         for (section in sections) {
             if (sections.hasOwnProperty(section)) {
-                //console.log("#" + sections[section][1]);
                 $('#' + sections[section][1]).hide();
             }
         }
