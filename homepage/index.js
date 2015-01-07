@@ -10,7 +10,7 @@
     sections.fun = ['btnFun', 'contentFun'];
 
 
-    //window.history.pushState("object or string", "Title", "/new-url");
+    //
 
     function chooseSectionByUrl() {
         //console.log(document.location.hash);
@@ -48,6 +48,17 @@
         for (section in sections) {
             if (sections.hasOwnProperty(section)) {
                 if (sections[section][0] === btnId) {
+                    window.history.pushState("object or string", "Title", "/#" + section);
+                }
+            }
+        }
+    }
+
+    function updateUrl(btnId) {
+        var section;
+        for (section in sections) {
+            if (sections.hasOwnProperty(section)) {
+                if (sections[section][0] === btnId) {
                     $('#' + sections[section][1]).show();
                 }
             }
@@ -70,6 +81,7 @@
         $('.mainBtns').click(function () {
             hideSections();
             showSection(this.id);
+            updateUrl(this.id);
             resizeIframe();
         });
 
