@@ -15,8 +15,9 @@ iframe {
 
 .pictueBox {
     height:60px;
-    background-image: url('/images/weebly_banner.jpg');    
+    background-image: url('/images/weebly_banner.jpg');
     background-color:white;
+    filter:none;
 }
 
 .buttonRow {
