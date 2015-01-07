@@ -12,6 +12,15 @@
 
     //window.history.pushState("object or string", "Title", "/new-url");
 
+    function chooseSectionByUrl() {
+        var section;
+        for (section in sections) {
+            if (sections.hasOwnProperty(section)) {
+                console.log(section);
+            }
+        }
+    }
+
     function resizeIframe() {
         var width = $('#iframe').width() * (11 / 8.5);
         if (width > 1080) { width = 1080; }
@@ -41,6 +50,7 @@
     }
 
     function onReady() {
+        chooseSectionByUrl();
         resizeIframe();
         hideSections();
 
