@@ -8,6 +8,7 @@
     sections.resume = ['btnResume', 'contentResume'];
     sections.web = ['btnWeb', 'contentWeb'];
     sections.fun = ['btnFun', 'contentFun'];
+    sections.game = ['btnGame', 'contentGame'];
 
     function chooseSectionByUrl() {
         var section;
