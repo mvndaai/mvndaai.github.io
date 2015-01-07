@@ -13,14 +13,14 @@
     //window.history.pushState("object or string", "Title", "/new-url");
 
     function chooseSectionByUrl() {
+        //console.log(document.location.hash);
         var section;
         for (section in sections) {
             if (sections.hasOwnProperty(section)) {
                 if (("#" + section) === document.location.hash) {
-                    alert("I found a match");
+                    $('#' + sections[section][1]).show();
+                    return;
                 }
-                //alert("look at the console");
-                console.log(section);
             }
         }
         $("#contentHome").show();
@@ -73,6 +73,6 @@
             resizeIframe();
         });
 
-        console.log(document.location.hash);
+
     });
 }());
