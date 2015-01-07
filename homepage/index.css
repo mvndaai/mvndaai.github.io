@@ -13,11 +13,16 @@ iframe {
     width:100%;
 }
 
+.pictueBox {
+    background-image: url("/img/bluemountains_2560x1600.jpg");
+    height:30px;
+}
+
 .buttonRow {
     border-color:white;
     border-style:solid;
     color:grey;
-    height: 20px;
+    height: 50px;
 }
 
 .mainBtns {
