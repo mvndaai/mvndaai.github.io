@@ -39,6 +39,7 @@
     }
 
     function showSection(btnId) {
+        //Good reading: https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Manipulating_the_browser_history
         var section;
         for (section in sections) {
             if (sections.hasOwnProperty(section)) {
