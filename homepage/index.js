@@ -16,10 +16,14 @@
         var section;
         for (section in sections) {
             if (sections.hasOwnProperty(section)) {
-                alert("look at the console");
+                if (("#" + section) === document.location.hash) {
+                    alert("I found a match");
+                }
+                //alert("look at the console");
                 console.log(section);
             }
         }
+        $("#contentHome").show();
     }
 
     function resizeIframe() {
@@ -51,12 +55,9 @@
     }
 
     function onReady() {
+        hideSections();
         chooseSectionByUrl();
         resizeIframe();
-        hideSections();
-
-
-        $("#contentHome").show();
     }
 
     $(document).ready(function () {
