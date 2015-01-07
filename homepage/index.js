@@ -43,7 +43,7 @@
         for (section in sections) {
             if (sections.hasOwnProperty(section)) {
                 if (sections[section][0] === btnId) {
-                    window.history.pushState("object or string", "Title", "/#" + section);
+                    window.history.replaceState("object or string", "Title", "/#" + section);
                 }
             }
         }

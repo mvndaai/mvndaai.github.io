@@ -36,7 +36,13 @@ iframe {
 }
 
 .mainBtns:active {
+    /*For the moment this does nothing*/
     background-color:black;
+}
+
+.activeBtn {
+    background-color:black;
+    color:white;
 }
 
 .content {
