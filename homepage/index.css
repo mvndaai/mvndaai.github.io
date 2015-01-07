@@ -16,6 +16,7 @@ iframe {
 .pictueBox {
     height:60px;
     background-image: url('/img/bluemountains_2560x1600.jpg');
+    border-color:white;
 }
 
 .buttonRow {
