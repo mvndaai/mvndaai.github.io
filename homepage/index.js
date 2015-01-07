@@ -16,6 +16,7 @@
         var section;
         for (section in sections) {
             if (sections.hasOwnProperty(section)) {
+                alert("look at the console");
                 console.log(section);
             }
         }
