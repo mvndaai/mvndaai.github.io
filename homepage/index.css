@@ -24,11 +24,11 @@ iframe {
     border-color:white;
     border-style:solid;
     color:grey;
-    padding: 15;
+    padding: 10;
 }
 
 .mainBtns {
-    padding: 15 30;
+    padding: 10 30;
 }
 
 .mainBtns:hover {
