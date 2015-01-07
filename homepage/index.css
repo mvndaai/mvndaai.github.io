@@ -24,6 +24,7 @@ iframe {
     border-color:white;
     border-style:solid;
     color:grey;
+    padding: 15;
 }
 
 .mainBtns {
