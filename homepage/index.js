@@ -10,6 +10,7 @@
     sections.fun = ['btnFun', 'contentFun'];
 
 
+    //window.history.pushState("object or string", "Title", "/new-url");
 
     function resizeIframe() {
         var width = $('#iframe').width() * (11 / 8.5);
