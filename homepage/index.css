@@ -1,3 +1,10 @@
+html{
+    background: url('/images/backgrount_darkwood.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 
 body {
     color:grey;
@@ -15,15 +22,9 @@ iframe {
 
 .pictureBox {
     height:100px;
+    background-image: url('/images/weebly_banner.jpg');
     background-color:white;
     filter:none;
-
-    background: url('/images/weebly_banner.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-
 }
 
 .buttonRow {
