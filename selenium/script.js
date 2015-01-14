@@ -4,7 +4,7 @@ $( document ).ready(function() {
   function updateCount(){
     $("#count").text(count);
     console.log( "count: " + count );
-  };
+  }
 
   updateCount();
   $("#button").click( function(){

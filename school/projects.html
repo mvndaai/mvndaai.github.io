@@ -1,33 +1,35 @@
+<!DOCTYPE html>
 <html><head>
-<SCRIPT src="./web-files/dtjava.js"></SCRIPT>
+<script src="./web-files/dtjava.js"></script>
 <script>
-  var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
-  if(!is_chrome)
-  {
-    var content = 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPGpubHAgc3BlYz0iMS4wIiB4bWxuczpqZng9Imh0dHA6Ly9qYXZhZnguY29tIiBocmVmPSJDYWxjdWxhdG9yLmpubHAiPgogIDxpbmZvcm1hdGlvbj4KICAgIDx0aXRsZT5DYWxjdWxhdG9yPC90aXRsZT4KICAgIDx2ZW5kb3I+bWF2YW5qPC92ZW5kb3I+CiAgICA8ZGVzY3JpcHRpb24+bnVsbDwvZGVzY3JpcHRpb24+CiAgICA8b2ZmbGluZS1hbGxvd2VkLz4KICA8L2luZm9ybWF0aW9uPgogIDxyZXNvdXJjZXM+CiAgICA8amZ4OmphdmFmeC1ydW50aW1lIHZlcnNpb249IjIuMisiIGhyZWY9Imh0dHA6Ly9qYXZhZGwuc3VuLmNvbS93ZWJhcHBzL2Rvd25sb2FkL0dldEZpbGUvamF2YWZ4LWxhdGVzdC93aW5kb3dzLWk1ODYvamF2YWZ4Mi5qbmxwIi8+CiAgPC9yZXNvdXJjZXM+CiAgPHJlc291cmNlcz4KICAgIDxqMnNlIHZlcnNpb249IjEuNisiIGhyZWY9Imh0dHA6Ly9qYXZhLnN1bi5jb20vcHJvZHVjdHMvYXV0b2RsL2oyc2UiLz4KICAgIDxqYXIgaHJlZj0iQ2FsY3VsYXRvci5qYXIiIHNpemU9Ijk3NDciIGRvd25sb2FkPSJlYWdlciIgLz4KICA8L3Jlc291cmNlcz4KICA8YXBwbGV0LWRlc2MgIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIiBtYWluLWNsYXNzPSJjb20uamF2YWZ4Lm1haW4uTm9KYXZhRlhGYWxsYmFjayIgIG5hbWU9IkNhbGN1bGF0b3IiID4KICAgIDxwYXJhbSBuYW1lPSJyZXF1aXJlZEZYVmVyc2lvbiIgdmFsdWU9IjIuMisiLz4KICA8L2FwcGxldC1kZXNjPgogIDxqZng6amF2YWZ4LWRlc2MgIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIiBtYWluLWNsYXNzPSJjYWxjdWxhdG9yLkNhbGN1bGF0b3IiICBuYW1lPSJDYWxjdWxhdG9yIiAvPgogIDx1cGRhdGUgY2hlY2s9ImFsd2F5cyIvPgo8L2pubHA+Cg==';
     function launchApplication(jnlpfile) {
 
-      dtjava.launch({
-        url : jnlpfile,
-        jnlp_content : content
-      },{ javafx : '2.2+' },{});
-      return false;
+        dtjava.launch({
+            url : jnlpfile,
+            jnlp_content : content
+        },{ javafx : '2.2+' },{});
+        return false;
     }
 
     function javafxEmbed() {
-      dtjava.embed(
-      {
-        url : 'Calculator.jnlp',
-        placeholder : 'javafx-app-placeholder',
-        width : 224,
-        height : 292,
-        jnlp_content : content
-      },{javafx : '2.2+'},{});
+        dtjava.embed(
+        {
+            url : 'Calculator.jnlp',
+            placeholder : 'javafx-app-placeholder',
+            width : 224,
+            height : 292,
+            jnlp_content : content
+        },{javafx : '2.2+'},{});
     }
-    <!-- Embed FX application into web page once page is loaded -->
-    dtjava.addOnloadCallback(javafxEmbed);
-  }
 
+    var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
+    if(!is_chrome)
+    {
+    var content = 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPGpubHAgc3BlYz0iMS4wIiB4bWxuczpqZng9Imh0dHA6Ly9qYXZhZnguY29tIiBocmVmPSJDYWxjdWxhdG9yLmpubHAiPgogIDxpbmZvcm1hdGlvbj4KICAgIDx0aXRsZT5DYWxjdWxhdG9yPC90aXRsZT4KICAgIDx2ZW5kb3I+bWF2YW5qPC92ZW5kb3I+CiAgICA8ZGVzY3JpcHRpb24+bnVsbDwvZGVzY3JpcHRpb24+CiAgICA8b2ZmbGluZS1hbGxvd2VkLz4KICA8L2luZm9ybWF0aW9uPgogIDxyZXNvdXJjZXM+CiAgICA8amZ4OmphdmFmeC1ydW50aW1lIHZlcnNpb249IjIuMisiIGhyZWY9Imh0dHA6Ly9qYXZhZGwuc3VuLmNvbS93ZWJhcHBzL2Rvd25sb2FkL0dldEZpbGUvamF2YWZ4LWxhdGVzdC93aW5kb3dzLWk1ODYvamF2YWZ4Mi5qbmxwIi8+CiAgPC9yZXNvdXJjZXM+CiAgPHJlc291cmNlcz4KICAgIDxqMnNlIHZlcnNpb249IjEuNisiIGhyZWY9Imh0dHA6Ly9qYXZhLnN1bi5jb20vcHJvZHVjdHMvYXV0b2RsL2oyc2UiLz4KICAgIDxqYXIgaHJlZj0iQ2FsY3VsYXRvci5qYXIiIHNpemU9Ijk3NDciIGRvd25sb2FkPSJlYWdlciIgLz4KICA8L3Jlc291cmNlcz4KICA8YXBwbGV0LWRlc2MgIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIiBtYWluLWNsYXNzPSJjb20uamF2YWZ4Lm1haW4uTm9KYXZhRlhGYWxsYmFjayIgIG5hbWU9IkNhbGN1bGF0b3IiID4KICAgIDxwYXJhbSBuYW1lPSJyZXF1aXJlZEZYVmVyc2lvbiIgdmFsdWU9IjIuMisiLz4KICA8L2FwcGxldC1kZXNjPgogIDxqZng6amF2YWZ4LWRlc2MgIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIiBtYWluLWNsYXNzPSJjYWxjdWxhdG9yLkNhbGN1bGF0b3IiICBuYW1lPSJDYWxjdWxhdG9yIiAvPgogIDx1cGRhdGUgY2hlY2s9ImFsd2F5cyIvPgo8L2pubHA+Cg==';
+
+    //<!-- Embed FX application into web page once page is loaded -->
+    dtjava.addOnloadCallback(javafxEmbed);
+    }
 </script>
 
 
@@ -35,10 +37,10 @@
   <h2>Projects from school</h2>
 
   <!-- Applet will be inserted here -->
-  <div id='javafx-app-placeholder' style="float:right; padding:0 10% 0 0 "></div>
+  <div id="javafx-app-placeholder" style="float:right; padding:0 10% 0 0 "></div>
   <h3>Java</h3><hr>
 
-  <b>Calculator:</b> <span id="webstart"><a href='Calculator.jnlp'
+  <b>Calculator:</b> <span id="webstart"><a href="Calculator.jnlp"
       onclick="return launchApplication('Calculator.jnlp');">webstart</a></span>
   <a href="Calculator.jar">download</a><br>
   <b>Chat Client:</b> <a href="ChatClient.jar">download</a><br>

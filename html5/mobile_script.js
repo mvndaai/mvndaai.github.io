@@ -13,8 +13,8 @@ $( document ).ready(function() {
     logs();
 
     $("#current").html(
-      "Device is moblile: "+isMobileDevice()
-      +"</br>Serving mobile page:"+serverMobile()
+      "Device is moblile: "+isMobileDevice() +
+      "</br>Serving mobile page:"+serverMobile()
     );
 
 
@@ -31,7 +31,7 @@ $( document ).ready(function() {
     console.log("display_mobile:"+serverMobile());
   }
 
-  var key = "force_page_type"
+  var key = "force_page_type";
 
   function switchPageType(){
     if(key in localStorage){
@@ -49,7 +49,7 @@ $( document ).ready(function() {
       return true;
     }else{//Desktop
       if (key in localStorage){
-        console.log('Hello friends')
+        console.log('Hello friends');
         return true;
       }
       return false;
@@ -57,13 +57,13 @@ $( document ).ready(function() {
   }
 
   function isMobileDevice(){
-    if( navigator.userAgent.match(/Android/i)
-     || navigator.userAgent.match(/webOS/i)
-     || navigator.userAgent.match(/iPhone/i)
-     || navigator.userAgent.match(/iPad/i)
-     || navigator.userAgent.match(/iPod/i)
-     || navigator.userAgent.match(/BlackBerry/i)
-     || navigator.userAgent.match(/Windows Phone/i)
+    if( navigator.userAgent.match(/Android/i) ||
+     navigator.userAgent.match(/webOS/i) ||
+     navigator.userAgent.match(/iPhone/i) ||
+     navigator.userAgent.match(/iPad/i) ||
+     navigator.userAgent.match(/iPod/i) ||
+     navigator.userAgent.match(/BlackBerry/i) ||
+     navigator.userAgent.match(/Windows Phone/i)
      ){
         return true;
     } else {

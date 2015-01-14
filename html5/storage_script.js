@@ -29,7 +29,7 @@ $( document ).ready(function() {
     var key = $(this);
     key = key.text().split("=")[0];
     localStorage.removeItem(key);
-    console.log("LocalStorage Deleted: "+key)
+    console.log("LocalStorage Deleted: "+key);
     update_localStorage();
   });
 
@@ -37,7 +37,7 @@ $( document ).ready(function() {
     var key = $(this);
     key = key.text().split("=")[0];
     eraseCookie(key);
-    console.log("Cookie Deleted: "+key)
+    console.log("Cookie Deleted: "+key);
     update_cookies();
   });
 
@@ -69,25 +69,25 @@ $( document ).ready(function() {
     var value = $("#value").val();
     var type = $('input[name="type"]:checked').val();
 
-    if(!(key == '')){
+    if(key !== ''){
       console.log("key:", key, "| value:", value, "| type:", type);
       if(type === 'local'){
         localStorage[key]=value;
         update_localStorage();
       }else{
-        createCookie(key,value,10)
+        createCookie(key,value,10);
         update_cookies();
       }
     }
   }
 
   function createCookie(name,value,days) {
+    var expires = "";
   	if (days) {
   		var date = new Date();
   		date.setTime(date.getTime()+(days*24*60*60*1000));
-  		var expires = "; expires="+date.toGMTString();
+  		expires = "; expires="+date.toGMTString();
   	}
-  	else var expires = "";
   	document.cookie = name+"="+value+expires+"; path=/";
   }
 
@@ -96,8 +96,8 @@ $( document ).ready(function() {
   	var ca = document.cookie.split(';');
   	for(var i=0;i < ca.length;i++) {
   		var c = ca[i];
-  		while (c.charAt(0)==' ') c = c.substring(1,c.length);
-  		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+  		while (c.charAt(0) === ' ') c = c.substring(1,c.length);
+  		if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length,c.length);
   	}
   	return null;
   }
