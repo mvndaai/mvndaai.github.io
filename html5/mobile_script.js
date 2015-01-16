@@ -16,9 +16,8 @@ $( document ).ready(function() {
     });
 
     function displayString(){
-        var string = "Device is <strong>" + printDeviceType() + "</strong>";
+        var string = "Device is <strong>" + printDeviceType() + "</strong> ";
         string += "and page is <strong>" + printPageType() + "</strong>";
-
         return string;
     }
 
@@ -77,6 +76,22 @@ $( document ).ready(function() {
             return true;
         } else {
             return false;
+        }
+    }
+
+    function selectPageType(){
+        if (isMobileDevice()){
+            if(key in localStorage){
+                return "desktop";
+            }else{
+                return "mobile";
+            }
+        }else{//desktop device
+            if(key in localStorage){
+                return "mobile";
+            }else{
+                return "deskop";
+            }
         }
     }
 
