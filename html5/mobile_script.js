@@ -71,18 +71,10 @@ $( document ).ready(function() {
     }
 
     function selectPageType(){
-        if (isMobileDevice()){
-            if(key in localStorage){
+        if ((isMobileDevice() && key in localStorage) || !isMobileDevice()){
                 return "desktop";
-            }else{
+        }else{
                 return "mobile";
-            }
-        }else{//desktop device
-            if(key in localStorage){
-                return "mobile";
-            }else{
-                return "deskop";
-            }
         }
     }
 
