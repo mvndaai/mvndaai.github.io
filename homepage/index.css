@@ -76,6 +76,7 @@ iframe {
 }
 
 .fakeLink{
+    padding: 1px;
     color: blue;
     text-decoration: underline;
     cursor: pointer;
