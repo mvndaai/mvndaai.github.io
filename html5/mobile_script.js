@@ -36,12 +36,17 @@ $( document ).ready(function() {
     }
 
     function selectPageType(){
-        if ((isMobileDevice() && (key in localStorage)) || !(isMobileDevice()) ){
-            return "desktop";
-        }else{
+        if( isMobileDevice() ){
+            if (key in localStorage)
+                return "desktop";
             return "mobile";
+        }else{//Desktop
+            if (key in localStorage)
+                return "mobile";
+            return "desktop";
         }
     }
+
     function printDeviceType(){
         if (isMobileDevice()){
             return "mobile";
