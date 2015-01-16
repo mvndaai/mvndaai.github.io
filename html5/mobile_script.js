@@ -32,8 +32,6 @@ $( document ).ready(function() {
         }else{
             $(".block").addClass("block_mobile");
         }
-
-
     }
 
     function switchPageType(){
