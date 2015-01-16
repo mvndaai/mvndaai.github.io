@@ -74,6 +74,12 @@
         resizeIframe();
     }
 
+    function FakelinkClick(thisElement){
+        clickBtn(thisElement);
+        location.reload();
+        return false;
+    }
+
     $(document).ready(function () {
         onReady();
 
