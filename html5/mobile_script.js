@@ -18,12 +18,27 @@ $( document ).ready(function() {
         $("#current").html(displayString());
     });
 
+    function switchPageType(){
+        if(key in localStorage){
+            localStorage.removeItem(key);
+        }else{
+            localStorage.setItem(key,true);
+        }
+    }
+
     function displayString(){
         var string = "Device is <strong>" + printDeviceType() + "</strong> ";
         string += "and page is <strong>" + selectPageType() + "</strong>";
         return string;
     }
 
+    function selectPageType(){
+        if ((isMobileDevice() && key in localStorage) || !isMobileDevice()){
+            return "desktop";
+        }else{
+            return "mobile";
+        }
+    }
     function printDeviceType(){
         if (isMobileDevice()){
             return "mobile";
@@ -31,30 +46,6 @@ $( document ).ready(function() {
             return "desktop";
         }
     }
-
-
-    function switchPageType(){
-    if(key in localStorage){
-      localStorage.removeItem(key);
-    }else{
-      localStorage.setItem(key,true);
-    }
-
-    function serverMobile(){
-    if (isMobileDevice()){
-      if(key in localStorage){
-        return false;
-      }
-      return true;
-    }else{//Desktop
-      if (key in localStorage){
-        console.log('Hello friends');
-        return true;
-      }
-      return false;
-    }
-    }
-
 
     function isMobileDevice(){
         if( navigator.userAgent.match(/Android/i) ||
@@ -70,15 +61,6 @@ $( document ).ready(function() {
             return false;
         }
     }
-
-    function selectPageType(){
-        if ((isMobileDevice() && key in localStorage) || !isMobileDevice()){
-                return "desktop";
-        }else{
-                return "mobile";
-        }
-    }
-
 
 
 
