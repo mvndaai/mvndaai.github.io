@@ -9,10 +9,13 @@ $( document ).ready(function() {
 
     function logToConsole(){
         console.log(displayString());
+        console.log(localStorage[key]);
     }
 
     $("#switch").click(function(){
         console.log("Clicked switch button");
+        switchPageType();
+        $("#current").html(displayString());
     });
 
     function displayString(){
@@ -29,13 +32,12 @@ $( document ).ready(function() {
         }
     }
 
-    /*
+
     function switchPageType(){
     if(key in localStorage){
       localStorage.removeItem(key);
     }else{
       localStorage.setItem(key,true);
-    }
     }
 
     function serverMobile(){
