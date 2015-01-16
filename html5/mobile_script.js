@@ -29,6 +29,9 @@ $( document ).ready(function() {
     function displayString(){
         var string = "Device is <strong>" + printDeviceType() + "</strong> ";
         string += "and page is <strong>" + selectPageType() + "</strong>";
+        string += "<br> Page type is ";
+        if (key in localStorage){ string += "forced";}
+        else{string += "default";}
         return string;
     }
 
