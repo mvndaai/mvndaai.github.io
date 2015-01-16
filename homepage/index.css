@@ -74,3 +74,9 @@ iframe {
 .hidden{
     display: none;
 }
+
+.fakeLink{
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
