@@ -15,6 +15,7 @@ $( document ).ready(function() {
     function updatePage(){
         $("#current").html(displayString());
         $("#example").html(capitaliseFirstLetter(selectPageType()));
+        switchClasses();
     }
 
     $("#switch").click(function(){
@@ -22,6 +23,18 @@ $( document ).ready(function() {
         switchPageType();
         updatePage();
     });
+
+    function switchClasses(){
+        if (selectPageType() === "desktop")
+        {
+            $(".block").removeClass("block_mobile");
+
+        }else{
+            $(".block").addClass("block_mobile");
+        }
+
+
+    }
 
     function switchPageType(){
         if(key in localStorage){
