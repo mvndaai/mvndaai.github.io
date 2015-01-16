@@ -33,7 +33,7 @@ $( document ).ready(function() {
     }
 
     function selectPageType(){
-        if ((isMobileDevice() && key in localStorage) || !isMobileDevice()){
+        if ((isMobileDevice() && key in localStorage) || !(isMobileDevice())){
             return "desktop";
         }else{
             return "mobile";
