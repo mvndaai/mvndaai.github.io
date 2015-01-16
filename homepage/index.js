@@ -67,6 +67,13 @@
         resizeIframe();
     }
 
+    function clickBtn(thisElement){
+        hideSections();
+        showSection(thisElement.id);
+        updateUrl(thisElement.id);
+        resizeIframe();
+    }
+
     $(document).ready(function () {
         onReady();
 
@@ -75,10 +82,7 @@
         });
 
         $('.mainBtns').click(function () {
-            hideSections();
-            showSection(this.id);
-            updateUrl(this.id);
-            resizeIframe();
+            clickBtn(this);
         });
 
 
