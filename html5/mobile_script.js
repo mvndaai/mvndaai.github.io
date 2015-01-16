@@ -1,47 +1,36 @@
 $( document ).ready(function() {
+    var key = "force_page_type";
 
-  setup();
+    function setup(){
+        $("#current").html(displayString());
+        logToConsole();
+    }
+    setup();
 
-  $("#switch").click(function(){
-    switchPageType();
-    logs();
-  });
-
-
-
-  function setup(){
-    logs();
-
-    $("#current").html(
-      "Device is moblile: "+isMobileDevice() +
-      "</br>Serving mobile page:"+serverMobile()
-    );
-
-
-    if (isLocal()){
-      //console.log("This page is local");
-    }else{
-      //console.log("This page is online");
+    function logToConsole(){
+        console.log(displayString());
     }
 
-  }
+    $("#switch").click(function(){
+        console.log("Clicked switch button");
+    });
 
-  function logs(){
-    console.log("mobile_device:"+isMobileDevice());
-    console.log("display_mobile:"+serverMobile());
-  }
+    function displayString(){
+        var string = "Device is " + printDeviceType();
+        string += ", and page is " + printPageType();
+        return string;
+    }
 
-  var key = "force_page_type";
-
-  function switchPageType(){
+    /*
+    function switchPageType(){
     if(key in localStorage){
       localStorage.removeItem(key);
     }else{
       localStorage.setItem(key,true);
     }
-  }
+    }
 
-  function serverMobile(){
+    function serverMobile(){
     if (isMobileDevice()){
       if(key in localStorage){
         return false;
@@ -54,29 +43,41 @@ $( document ).ready(function() {
       }
       return false;
     }
-  }
-
-  function isMobileDevice(){
-    if( navigator.userAgent.match(/Android/i) ||
-     navigator.userAgent.match(/webOS/i) ||
-     navigator.userAgent.match(/iPhone/i) ||
-     navigator.userAgent.match(/iPad/i) ||
-     navigator.userAgent.match(/iPod/i) ||
-     navigator.userAgent.match(/BlackBerry/i) ||
-     navigator.userAgent.match(/Windows Phone/i)
-     ){
-        return true;
-    } else {
-        return false;
     }
-  }
+    */
 
-  function isLocal(){
-    var current_url = document.URL;
-    if (current_url.indexOf("file://") > -1)
-      return true;
-    return false;
-  }
+
+    function isMobileDevice(){
+        if( navigator.userAgent.match(/Android/i) ||
+            navigator.userAgent.match(/webOS/i) ||
+            navigator.userAgent.match(/iPhone/i) ||
+            navigator.userAgent.match(/iPad/i) ||
+            navigator.userAgent.match(/iPod/i) ||
+            navigator.userAgent.match(/BlackBerry/i) ||
+            navigator.userAgent.match(/Windows Phone/i)
+        ){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function printDeviceType(){
+        if (isMobileDevice()){
+            return "mobile";
+        }else{
+            return "desktop";
+        }
+    }
+
+    function printPageType(){
+        return "undefined";
+        if (isMobileDevice()){
+            return "mobile";
+        }else{
+            return "desktop";
+        }
+    }
 
 
 });
