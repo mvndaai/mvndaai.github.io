@@ -7,7 +7,6 @@ html{
 }
 
 body {
-    color:grey;
     font-family:Helvetica, Arial, sans-serif;
 }
 
@@ -30,12 +29,11 @@ iframe {
 .buttonRow {
     border-style:solid;
     color:grey;
-    padding: 10;
+    padding: 10px;
 }
 
 .mainBtns {
-    margin:20 20 20 20;
-    /*padding: 10 30;*/
+    padding: 10px 30px;
 }
 
 .mainBtns:hover {
@@ -71,4 +69,8 @@ iframe {
 }
 .block {
     display:block;
+}
+
+.hidden{
+    display: none;
 }
