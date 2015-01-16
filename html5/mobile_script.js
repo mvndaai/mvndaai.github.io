@@ -2,8 +2,8 @@ $( document ).ready(function() {
     var key = "force_page_type";
 
     function setup(){
-        $("#current").html(displayString());
-        logToConsole();
+        //logToConsole();
+        updatePage();
     }
     setup();
 
@@ -12,10 +12,15 @@ $( document ).ready(function() {
         console.log(localStorage[key]);
     }
 
+    function updatePage(){
+        $("#current").html(displayString());
+        $("#example").html(capitaliseFirstLetter(selectPageType()));
+    }
+
     $("#switch").click(function(){
         console.log("Clicked switch button");
         switchPageType();
-        $("#current").html(displayString());
+        updatePage();
     });
 
     function switchPageType(){
@@ -70,6 +75,8 @@ $( document ).ready(function() {
         }
     }
 
-
-
+    function capitaliseFirstLetter(string)
+    {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
 });
