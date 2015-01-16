@@ -17,20 +17,11 @@ $( document ).ready(function() {
 
     function displayString(){
         var string = "Device is <strong>" + printDeviceType() + "</strong> ";
-        string += "and page is <strong>" + printPageType() + "</strong>";
+        string += "and page is <strong>" + selectPageType() + "</strong>";
         return string;
     }
 
     function printDeviceType(){
-        if (isMobileDevice()){
-            return "mobile";
-        }else{
-            return "desktop";
-        }
-    }
-
-    function printPageType(){
-        return "undefined";
         if (isMobileDevice()){
             return "mobile";
         }else{
