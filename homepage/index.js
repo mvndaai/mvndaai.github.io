@@ -76,7 +76,7 @@
 
     function FakelinkClick(thisElement){
         clickBtn(thisElement);
-        location.reload();
+        window.location.reload();
         return false;
     }
 
