@@ -16,9 +16,27 @@ $( document ).ready(function() {
     });
 
     function displayString(){
-        var string = "Device is " + printDeviceType();
-        string += ", and page is " + printPageType();
+        var string = "Device is <strong>" + printDeviceType() + "</strong>";
+        string += "and page is <strong>" + printPageType() + "</strong>";
+
         return string;
+    }
+
+    function printDeviceType(){
+        if (isMobileDevice()){
+            return "mobile";
+        }else{
+            return "desktop";
+        }
+    }
+
+    function printPageType(){
+        return "undefined";
+        if (isMobileDevice()){
+            return "mobile";
+        }else{
+            return "desktop";
+        }
     }
 
     /*
@@ -62,22 +80,7 @@ $( document ).ready(function() {
         }
     }
 
-    function printDeviceType(){
-        if (isMobileDevice()){
-            return "mobile";
-        }else{
-            return "desktop";
-        }
-    }
 
-    function printPageType(){
-        return "undefined";
-        if (isMobileDevice()){
-            return "mobile";
-        }else{
-            return "desktop";
-        }
-    }
 
 
 });
