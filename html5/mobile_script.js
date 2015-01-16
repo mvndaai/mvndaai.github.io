@@ -54,7 +54,6 @@ $( document ).ready(function() {
       return false;
     }
     }
-    */
 
 
     function isMobileDevice(){
