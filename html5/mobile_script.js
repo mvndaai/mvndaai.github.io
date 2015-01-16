@@ -30,8 +30,8 @@ $( document ).ready(function() {
         var string = "Device is <strong>" + printDeviceType() + "</strong> ";
         string += "and page is <strong>" + selectPageType() + "</strong>";
         string += "<br> Page type is ";
-        if (key in localStorage){ string += "forced";}
-        else{string += "default";}
+        if (key in localStorage){ string += "<strong>forced</strong>";}
+        else{string += "<strong>default</strong>";}
         return string;
     }
 
