@@ -117,7 +117,7 @@
     function javafxEmbed() {
         dtjava.embed(
         {
-            url : '/school/Calculator.jnlp',
+            url : '../school/Calculator.jnlp',
             placeholder : 'javafx-app-placeholder',
             width : 224,
             height : 292,
