@@ -120,7 +120,7 @@
         console.log("Got to launchApplication function");
         dtjava.launch({
             //url : jnlpfile,
-            url : './school/Calculator.jnlp',
+            url : '/school/Calculator.jnlp',
             jnlp_content : content
         },{ javafx : '2.2+' },{});
         return false;
