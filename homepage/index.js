@@ -117,6 +117,7 @@
 
     //Java stuff
     function launchApplication(jnlpfile) {
+        console.log("Got to launchApplication function");
         console.log(jnlpfile);
         dtjava.launch({
             url : jnlpfile,
