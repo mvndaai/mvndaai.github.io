@@ -113,6 +113,7 @@
 
     //Java stuff
     function launchApplication(jnlpfile) {
+        console.log(jnlpfile);
         dtjava.launch({
             url : jnlpfile,
             jnlp_content : content
