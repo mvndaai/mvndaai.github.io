@@ -105,7 +105,9 @@
 
         hideInChrome($('.hideInChrome'));
 
-        dtjava.addOnloadCallback(javafxEmbed);
+        if(!isChrome){
+            dtjava.addOnloadCallback(javafxEmbed);
+        }
 
     });
 
