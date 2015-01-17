@@ -81,6 +81,16 @@
         return false;
     }
 
+    function hideInChrome(thisElement){
+        var isChrome = navigator.userAgent.indexOf("Chrome/") > -1;
+        if(isChrome)
+        {
+            thisElement.hide();
+        }
+    }
+
+
+
     $(document).ready(function () {
         onReady();
 
@@ -91,6 +101,8 @@
         $('.mainBtns').click(function () {
             clickBtn(this);
         });
+
+        hideInChrome($('.hideInChrome'));
     });
 
     //Java stuff
