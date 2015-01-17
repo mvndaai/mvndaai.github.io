@@ -108,12 +108,6 @@
 
         $(".fakeBtns").click(function(){
             clickBtn(this);
-            console.log("In method");
-            if(!isChrome){
-                //history.go(0);
-                //window.location.href=window.location.href;
-                window.location.reload();
-            }
         });
 
         hideInChrome($('.hideInChrome'));
