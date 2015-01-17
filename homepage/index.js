@@ -106,6 +106,10 @@
             clickBtn(this);
         });
 
+        $(".fakeBtns").click(function(){
+            clickBtn(this);
+        });
+
         hideInChrome($('.hideInChrome'));
         showInChrome($('.showInChrome'));
 
