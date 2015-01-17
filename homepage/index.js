@@ -108,6 +108,7 @@
 
         $(".fakeBtns").click(function(){
             clickBtn(this);
+            window.location.reload();
         });
 
         hideInChrome($('.hideInChrome'));
