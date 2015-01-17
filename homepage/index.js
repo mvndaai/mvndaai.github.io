@@ -104,6 +104,9 @@
         });
 
         hideInChrome($('.hideInChrome'));
+        
+        dtjava.addOnloadCallback(javafxEmbed);
+
     });
 
     //Java stuff
@@ -126,11 +129,9 @@
         },{javafx : '2.2+'},{});
     }
 
-    if(!isChrome)
-    {
-        //<!-- Embed FX application into web page once page is loaded -->
-        dtjava.addOnloadCallback(javafxEmbed);
-    }
+    //<!-- Embed FX application into web page once page is loaded -->
+
+
 
 
 }());
