@@ -84,13 +84,16 @@
     }
 
     function hideInChrome(thisElement){
-        if(isChrome)
-        {
+        if(isChrome) {
             thisElement.hide();
         }
     }
 
-
+    function showInChrome(thisElement){
+        if(!isChrome) {
+            thisElement.hide();
+        }
+    }
 
     $(document).ready(function () {
         onReady();
@@ -104,6 +107,7 @@
         });
 
         hideInChrome($('.hideInChrome'));
+        showInChrome($('.showInChrome'));
 
         if(!isChrome){
             dtjava.addOnloadCallback(javafxEmbed);
