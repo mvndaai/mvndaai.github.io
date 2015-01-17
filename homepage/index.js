@@ -108,7 +108,7 @@
     //Java stuff
     function launchApplication(jnlpfile) {
         dtjava.launch({
-            url : jnlpfile,
+            url : "../school/" + jnlpfile,
             jnlp_content : content
         },{ javafx : '2.2+' },{});
         return false;
