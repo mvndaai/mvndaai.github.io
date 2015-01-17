@@ -118,9 +118,11 @@
     //Java stuff
     function launchApplication() {
         console.log("Got to launchApplication function");
+        var calcUrl = "/school/Calculator.jnlp";
+        console.log(calcUrl);
         dtjava.launch({
             //url : jnlpfile,
-            url : '/school/Calculator.jnlp',
+            url : calcUrl,
             jnlp_content : content
         },{ javafx : '2.2+' },{});
         return false;
