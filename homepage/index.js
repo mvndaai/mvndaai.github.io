@@ -108,9 +108,9 @@
 
         $(".fakeBtns").click(function(){
             clickBtn(this);
-            //window.location.href=window.location.href
             //history.go(0);
             window.location.href=window.location.href;
+            window.location.reload();
         });
 
         hideInChrome($('.hideInChrome'));
