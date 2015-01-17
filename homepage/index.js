@@ -104,7 +104,7 @@
 
         $('.mainBtns').click(function () { clickBtn(this); });
         $(".fakeBtns").click(function(){ clickBtn(this); });
-        $("#webstart").click(function(){ launchApplication(jnlpfile); });
+        $("#webstart").click(function(){ launchApplication('jnlpfile'); });
 
         hideInChrome($('.hideInChrome'));
         showInChrome($('.showInChrome'));
