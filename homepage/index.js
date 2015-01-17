@@ -9,6 +9,7 @@
     sections.web = ['btnWeb', 'contentWeb'];
     sections.fun = ['btnFun', 'contentFun'];
     sections.game = ['btnGame', 'contentGame'];
+    sections.school = ['btnSchool', 'contentSchool'];
 
     function chooseSectionByUrl() {
         var section;
