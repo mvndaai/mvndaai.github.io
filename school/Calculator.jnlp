@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="/school/Calculator3.0.jnlp">
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="/school/Calculator.jnlp">
   <information>
     <title>Calculator</title>
     <vendor>mavanj</vendor>
@@ -11,7 +11,7 @@
   </resources>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="./Calculator2.0.jar" size="9747" download="eager" />
+    <jar href="./Calculator.jar" size="9747" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Calculator" >
     <param name="requiredFXVersion" value="2.2+"/>

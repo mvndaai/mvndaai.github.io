@@ -117,7 +117,6 @@
 
     //Java stuff
     function launchApplication() {
-        console.log("Got to launchApplication function");
         var jnlpfile = "/school/Calculator.jnlp";
         console.log(calcUrl);
         dtjava.launch({
