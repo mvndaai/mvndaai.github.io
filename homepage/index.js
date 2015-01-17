@@ -108,7 +108,7 @@
 
         $(".fakeBtns").click(function(){
             clickBtn(this);
-            window.location.reload();
+            history.go(0);
         });
 
         hideInChrome($('.hideInChrome'));
