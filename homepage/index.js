@@ -104,7 +104,7 @@
 
         $('.mainBtns').click(function () { clickBtn(this); });
         $(".fakeBtns").click(function(){ clickBtn(this); });
-        $("#webstart").click(function(){ launchApplication('jnlpfile'); });
+        $("#webstart").click(function(){ launchApplication(); });
 
         hideInChrome($('.hideInChrome'));
         showInChrome($('.showInChrome'));
@@ -116,12 +116,11 @@
     });
 
     //Java stuff
-    function launchApplication(jnlpfile) {
+    function launchApplication() {
         console.log("Got to launchApplication function");
-        console.log(jnlpfile);
         dtjava.launch({
             //url : jnlpfile,
-            url : '/school/Calculator.jnlp',
+            url : './school/Calculator.jnlp',
             jnlp_content : content
         },{ javafx : '2.2+' },{});
         return false;
