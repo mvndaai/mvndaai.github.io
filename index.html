@@ -40,6 +40,8 @@
                         <br><a href="/selenium/presentation.html">How to use Selenium with Ruby</a>
                         <br><a href="/html5">Things I have learned to do with HTML5</a>
                         <br><a href="/#game" onclick="window.location.reload();">My favorite web game</a>
+                        <br><a href="/#game" onclick="return clickBtn(this)">Test game</a>
+                        <span class="mainBtns" id="btnFun">Fun</span>
                     </p>
                 </div>
 
@@ -56,14 +58,15 @@
                         -->
 
                         <h3>Java</h3>
-                        <h5 class="showInChrome">Note: webstart avaliable when not in Chrome</h5>
+                        <h5 class="showInChrome">Note: Java webstart avaliable when not in Chrome</h5>
                         <b>Calculator:</b> <a href="./school/Calculator.jar">download</a>
                         <!--
                         <span id="webstart" class="hideInChrome"><a href="./school/Calculator.jnlp"
                             onclick="return launchApplication('./school/Calculator.jnlp');">webstart</a></span>
                         -->
-                        <span id="webstart" class="hideInChrome"><a href="./#school"
-                            onclick="return launchApplication('./school/Calculator.jnlp');">tmp webstart</a></span>
+                        <span class="hideInChrome">
+                            <a href="./#school" onclick="return launchApplication('./school/Calculator.jnlp');">tmp webstart</a>
+                        </span>
 
                         <br><b>Chat Client:</b> <a href="./school/ChatClient.jar">download</a>
                         <br><b>Chat Sever:</b> <a href="./school/ChatServer.jar">download</a>
