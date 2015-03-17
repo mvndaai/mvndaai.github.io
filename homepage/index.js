@@ -96,6 +96,11 @@
     }
 
     $(document).ready(function () {
+
+        var host = "mvndaai.github.io";
+        if ((host == window.location.host) && (window.location.protocol != "https:")) window.location.protocol = "https";
+
+
         onReady();
 
         $(window).resize(function () {
