@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Battle Ship</title>
+        <link href="./index.css" rel="stylesheet" type="text/css">
+        <script src="./index.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="login" id="Credentials">
+            <input type="text" placeholder="username" id="username"/>
+            <input type="password" placeholder="password" id="password"/>
+            <button id="loginBtn">log in</button>
+            <a href="http://universe.tc.uvu.edu/cs2550/assignments/PasswordCheck/list.php">help</a>
+            <br><br><span class="hidden" id="loginText"></span>
+        </div>
+
+        <div class="center">
+            <img src="http://allthingsclipart.com/03/battleship.06.jpg" title="Thank you allthingsclipart.com for the picture" class="battleShipPic">
+            <!-- <a href="http://allthingsclipart.com/03/battleship.clipart.htm">Picture Gallery</a> -->
+            <h1>Battle Ship</h1>
+            <a href="./game.html">Play Battleship</a><br>
+            <a href="http://smile.amazon.com/Hasbro-A3264-Battleship-Game/dp/B00C0ULS3G/" target="_blank">Buy the Board Game</a>
+            <br><br>
+
+            <div class="ruleBox">
+                <h2>Setup</h2>
+                <ul>
+                    <li>User places their ships</li>
+                    <li>When all ships are placed press "Start"</li>
+                </ul>
+                <h2>Gameplay</h2>
+                <ul>
+                    <li>This is a turn base gamed.</li>
+                    <li>User chooses a space to attack on the opponent's field.</li>
+                    <li>If attack is a hit, you get one icon, if a miss a different one.</li>
+                    <li>After the user's turn opponent attacks with the same results on users map.</li>
+                    <li>When all the ships of one player are destroyed, that player is defeated.</li>
+                </ul>
+            </div>
+            <br>
+
+            <div class="ruleBox">
+                <button id="btnJSON" class="">Read save.json</button>
+                <div id="displayJSON"></div>
+            </div>
+            <br>
+
+
+            <div class="ruleBox">
+                <h2>Preliminary Software Design <a href="http://universe.tc.uvu.edu/cs2550/project/swDesign.html" target="_blank">(example)</a></h2>
+
+
+                <h3>Objects(vars in list):</h3>
+                <h4>Game</h4>
+                <ul>
+                    <li><strong>boardSize:</strong> int of lenght/width of the board</li>
+                    <li><strong>ships:</strong> int of number of ships</li>
+                    <li><strong>players:</strong> array of both player</li>
+                    <li><strong>userTurn:</strong> boolean to choose whose turn it is</li>
+                    <li class="noBullet">Ex. {boardSize:8, ships:3, players:[], userTurn:true}</li>
+                </ul>
+
+
+                <h4>Player</h4>
+                <ul>
+                    <li><strong>name:</strong> name of player</li>
+                    <li><strong>ships:</strong> array of ship objects</li>
+                    <li><strong>attacks:</strong> array of attack locations Ex: x.y</li>
+                    <li><strong>hits:</strong> array of hit locations Ex: x.y</li>
+                    <li><strong>shipVisibility:</strong> bool if the ships are displayed on the board</li>
+                    <li><strong>opponantName:</strong> name of the opponant</li>
+                    <li><strong>boardDiv:</strong> the html element the board updates to</li>
+                    <li class="noBullet">Ex. {name:"user", ships:[], attacks:["1.1","2.5"], hits:["2.5"],
+                        shipVisibility:true, opponantName:"comp", boardDiv:""}</li>
+                </ul>
+
+                <h4>Ship</h4>
+                <ul>
+                    <li><strong>head:</strong> int array x,y location on the grid to head of ship</li>
+                    <li><strong>orientation:</strong> enum: horizontal or vertical </li>
+                    <li><strong>length:</strong> int lenght of ship</li>
+                    <li class="noBullet">Ex. {head:"5.1", orientation:"horizontal", length:5}</li>
+                </ul>
+
+                <h3>Functions/Methods:</h3>
+                <ul>
+                    <li><strong>buildBoard()</strong> { Creates the board depending on size and ships }</li>
+                    <li><strong>setupMode()</strong> { Lets the user place their peices on the boards and waits till start button is clicked }</li>
+                    <li><strong>playMode()</strong> { Goes back and forth between players till the game ends }</li>
+                    <li><strong>endMode()</strong> { The game is over and it shows the end }</li>
+                    <li><strong>placeShips()</strong> { Lets the user place thier ships in setupMode }</li>
+                    <li><strong>userMove()</strong> { User chooses a place on the opponent map and calls checkHit }</li>
+                    <li><strong>computerMove()</strong> { Computer chooses a place on the opponent map and calls checkHit }</li>
+                    <li><strong>checkHit()</strong> { Checks if a attack hit a ship and updates ships and map if checks endGame }</li>
+                    <li><strong>updateShipCount()</strong> { Displays how many hits are left till someone wins }</li>
+                    <li><strong>endGame()</strong> { Checks if a player is out of ships, if so it goes to end mode }</li>
+                </ul>
+
+
+
+                <!--
+                    <p><strong>()</strong> {}</p>
+                -->
+
+                <h3>Notes:</h3>
+                <ul>
+                    <li>This is all preliminary it might change</li>
+                    <li>The ship image can be found <a href="http://allthingsclipart.com/03/battleship.clipart.htm">here</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </body>
+</html>

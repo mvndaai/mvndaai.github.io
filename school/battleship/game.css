@@ -1,0 +1,139 @@
+body{
+    background-color:grey;
+}
+tr{
+    width:100%;
+}
+
+.credentials{
+    z-index:500;
+    bottom: 0;
+    position: fixed;
+    border-radius:5px;
+    background-color:white;
+    width:260px;
+    padding:5px;
+    border:2px solid black;
+}
+
+.credentials > button{
+    float:right;
+}
+
+h5 {
+    margin:0;
+}
+
+.hidden{
+    display:none;
+}
+.invisitble {
+    /*Opacity settings for all browsers*/
+    opacity: 0;
+    -moz-opacity: 0;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0)
+}
+
+
+.center{
+    margin-left: auto;
+    margin-right: auto;
+    text-align:center;
+}
+
+.background{
+    background-color:lightGray;
+    border: 2px solid black;
+    border-radius:30px;
+    padding:20px;
+    width:65%;
+}
+
+.left{
+    float:left;
+}
+
+.right{
+    float:right;
+}
+.centerText{
+    text-align:center;
+}
+
+/*Welcome Screen*/
+.welcome{
+    width:97%;
+    padding-bottom:10px;
+    position:absolute;
+    top:-400;
+}
+
+.gameboard{
+    position:absolute;
+    width:100%;
+}
+
+/*Gameboard*/
+.square tbody tr td{
+    height:25px;
+    width:25px;
+    text-align:center;
+}
+
+.userBoard{
+    background-color:blue;
+}
+
+.userBoard td{
+    background-color:lightblue;
+}
+
+.compBoard{
+    background-color:red;
+}
+
+.compBoard td{
+    background-color:pink;
+}
+
+.endContainer p{
+    padding:30px;
+}
+
+.image{
+    position: relative;
+    width:100%;
+    height:100%;
+}
+
+.boatTop{
+    background: url('./images/boat_top.png') no-repeat center;
+}
+
+.boatCenterVertical{
+    background: url('./images/boat_center_vertical.png') no-repeat center;
+}
+
+.boatBottom{
+    background: url('./images/boat_bottom.png') no-repeat center;
+}
+
+.boatLeft{
+    background: url('./images/boat_left.png') no-repeat center;
+}
+
+.boatCenterHorizontal{
+    background: url('./images/boat_center_horizontal.png') no-repeat center;
+}
+
+.boatRight{
+    background: url('./images/boat_right.png') no-repeat center;
+}
+
+.attackHit{
+    background: url('./images/x_orange.png') no-repeat center;
+}
+
+.attackMiss{
+    background: url('./images/x_grey.png') no-repeat center;
+}
