@@ -281,15 +281,15 @@ v.drawShip = function(board,ship){
 };
 
 
-v.hitsRemaining = function(opponant,elementID){
+v.shipsRemaining = function(opponant,elementID){
     document.getElementById(elementID).innerHTML = m.shipsRemaining(opponant);
 };
-v.updateHitCounter = function(){
-    v.hitsRemaining(m.game.players.user,"shipsUser");
-    v.hitsRemaining(m.game.players.comp,"shipsComp");
+v.updateShipCounter = function(){
+    v.shipsRemaining(m.game.players.user,"shipsUser");
+    v.shipsRemaining(m.game.players.comp,"shipsComp");
 };
 v.updateView = function(){
-    v.updateHitCounter();
+    v.updateShipCounter();
     if(m.game.players.user.visibility)
         v.drawShips(c.boards.user, m.game.players.user.ships);
     if(m.game.players.comp.visibility)
@@ -353,9 +353,10 @@ c.setup = function(){
 c.setupSetupContainer = function(){
     document.getElementById("startBtn")
         .addEventListener("click", c.clickStart, false);
+    document.getElementById("demoBtn")
+        .addEventListener("click", c.clickStartFromDemoSave,false);
 
     c.onFileUpload();
-    c.updateDemoStateButton();
 };
 c.clickStart = function(){
     m.game = new Game();
@@ -373,7 +374,7 @@ c.clickStart = function(){
 c.startGame = function(){
     v.drawGameboard(m.game.boardSize,m.game.players.user,c.boards.user,false);
     v.drawGameboard(m.game.boardSize,m.game.players.comp,c.boards.comp,true);
-    v.updateHitCounter();
+    v.updateShipCounter();
 
     v.toggleSetupContainer();
     v.toggleGameContainer();
@@ -384,6 +385,9 @@ c.startGame = function(){
 
     document.getElementById("startBtn")
         .removeEventListener("click", c.clickStart,false);
+    document.getElementById("demoBtn")
+        .removeEventListener("click", c.clickStartFromDemoSave,false);
+
     //console.log(m.game);
     v.updateView();
 
@@ -404,8 +408,8 @@ c.attack = function(player,location){
     }else{
         v.displayMiss(c.boards[opponant.name],location);
     }
-    v.updateHitCounter();
-    v.updateHitCounter();
+    v.updateShipCounter();
+    v.updateShipCounter();
     c.saveGame();
     c.checkEndGame();
 
@@ -515,18 +519,15 @@ c.updateDownloadStateButton = function(){
         '<button>Download State</button></a>';
     document.getElementById("download").innerHTML = html;
 };
-c.updateDemoStateButton = function(){
+c.clickStartFromDemoSave = function(){
     var localRequest = new XMLHttpRequest();
     localRequest.open("GET", "./save.json");
     localRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     localRequest.onreadystatechange = function() {
         if (localRequest.readyState == 4 && localRequest.status == 200) {
             var response =  JSON.parse(localRequest.responseText);
-            var html, data = "text/json;charset=utf-8," +
-                encodeURIComponent(JSON.stringify(response));
-            html = '<a href="data:' + data + '" download="battleShipStateDemo.json">' +
-                '<button>Download Demo State</button></a>';
-            document.getElementById("demoDownload").innerHTML = html;
+            c.loadformJson(response);
+            c.startGame();
         }
     };
     localRequest.send();

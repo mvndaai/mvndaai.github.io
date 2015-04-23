@@ -62,3 +62,17 @@ li {
 .hidden{
     display:none;
 }
+table{
+    border-collapse: collapse;
+    width:80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+td{
+    border:2px solid black;
+}
+.implemented{
+    background-color:gray;
+    color:white;
+    text-shadow: 1px 1px 0 black;
+}

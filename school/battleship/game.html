@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Battle Ship</title>
+        <meta charset="UTF-8">
         <link href="./game.css" rel="stylesheet" type="text/css">
         <script src="./game.js" type="text/javascript"></script>
     </head>
@@ -21,15 +22,9 @@
                     </select>
                 </p>
                 <button id="startBtn">Start</button>
-                <span id="demoDownload">
-                    <button onclick="alert('Download is disabled by cross origin policies, try a different browser');">
-                        XMLHttpRequest Error</button>
-                </span>
+                <button id="demoBtn">Load Demo State</button>
                 <input type="button" value="Upload State" onclick="document.getElementById('selectedFile').click();" />
                 <br><input class="hidden" type="file" id="selectedFile"/>
-                <!--
-                <br><input type="file">
-                -->
             </div>
         </div>
 
