@@ -1,3 +1,3 @@
 m.route(document.body, "/home", {
-  "/home": m('','Hello World'),
+  "/home": {view:_ => m('','Hello World')},
 });
