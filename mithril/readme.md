@@ -1,0 +1,1 @@
+This is all the parts of my site made with [MithrilJS](https://mithril.js.org/)
