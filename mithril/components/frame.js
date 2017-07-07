@@ -1,6 +1,7 @@
 export default {
-    view: (vnode) => m('', [
+    view: (vnode) => [
         m('','This will be a header'),
-        vnode.children
-    ])
+        vnode.children,
+        m('', 'This could be a footer'),
+    ]
 };

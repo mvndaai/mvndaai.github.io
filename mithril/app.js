@@ -1,6 +1,6 @@
 import frame from '/mithril/components/frame.js';
+import home from '/mithril/routes/home.js';
 
 m.route(document.body, "/home", {
-  "/home": m(frame,{view: _ => m('','Hello World') }),
-  '/other': {view: _=> m('', 'Another page') }
+  '/home': {view: _ => m(frame, m(home))},
 });
