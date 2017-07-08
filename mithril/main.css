@@ -1,11 +1,21 @@
 :root {
     --navbar-height: 3.25rem;
+    --footer-height: 3.5rem;
     --background-color: #addcb7
     /*Example changing variables using JavaScript https://codepen.io/wesbos/pen/adQjoY*/
 }
 
 #content {
-    /*padding: 1rem;*/
+    padding: 1rem;
     background-color: var(--background-color);
-    height: calc(100vh - var(--navbar-height))
+    height: calc(100vh - var(--navbar-height) - var(--footer-height) );
+}
+
+.footer {
+    padding: 1rem 0;
+}
+
+.footer .social a {
+    margin: 0 1rem;
+    color: darkgrey;
 }
