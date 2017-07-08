@@ -1,0 +1,11 @@
+:root {
+    --navbar-height: 3.25rem;
+    --background-color: #addcb7
+    /*Example changing variables using JavaScript https://codepen.io/wesbos/pen/adQjoY*/
+}
+
+#content {
+    /*padding: 1rem;*/
+    background-color: var(--background-color);
+    height: calc(100vh - var(--navbar-height))
+}
