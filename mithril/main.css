@@ -12,9 +12,7 @@
         - var(--fa-size)
         - var(--content-padding)
     );
-    /*Example changing variables using JavaScript
-        https://codepen.io/wesbos/pen/adQjoY
-    */
+    /*Example changing variables using JavaScript: https://codepen.io/wesbos/pen/adQjoY*/
 }
 
 
