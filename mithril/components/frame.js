@@ -6,16 +6,29 @@ export default {
     ]
 };
 
-let githubURL = 'https://github.com/mvndaai';
+var menuOpen = false;
+window.addEventListener("keydown", e => {
+    if(menuOpen && e.code === 'Escape') {menuOpen = false; m.redraw();}
+});
 
+var active = 'is-active';
 let header = {
-    view: () => m('nav.navbar', [
+    oninit: (vnode) => vnode.state.path = m.route.get(),
+    menuOpen: false,
+    view: (vnode) => m('nav.navbar', [
         m('.navbar-brand', [
             m("a.navbar-item[href=/]", {oncreate: m.route.link}, 'mvndaai'),
+            m('.navbar-burger.burger[data-target="navMenuExample"]', {
+                onclick: _ => menuOpen = !menuOpen,
+                class: menuOpen ? active : ''
+            }, [m('span'), m('span'), m('span')])
         ]),
-        // m('navbar-menu',[
-        //     m('a.navbar-item[href=/bio]', {oncreate: m.route.link}, 'Bio'),
-        // ]),
+        m('#navMenuExample.navbar-menu', {class: menuOpen ? active : ''}, [
+            m('.navbar-start', [
+                m('a.navbar-item[href=/resume]', {oncreate: m.route.link, class: vnode.state.path === '/resume' ? active : ''}, 'Resume'),
+                m('a.navbar-item[href=/bio]', {oncreate: m.route.link, class: vnode.state.path === '/bio' ? active : ''}, 'Bio'),
+            ]),
+        ]),
     ])
 };
 

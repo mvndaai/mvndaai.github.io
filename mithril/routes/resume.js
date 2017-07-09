@@ -1,6 +1,6 @@
 export default {
-    view: _ => [
-        m('iframe[src="https://docs.google.com/gview?url=/jason_mavandi_resume.pdf"][frameborder="0"]')
-        // <iframe id="iframe" src="https://docs.google.com/gview?url=https://dl.dropboxusercontent.com/u/7103593/jasonmavandiresume.pdf&embedded=true#view=fit" frameborder="0"></iframe>
-    ]
+    view: _ => m('#resume',[
+        // https://stackoverflow.com/questions/17784037/how-to-display-pdf-file-in-html
+        m('embed[src="/jason_mavandi_resume.pdf"]'),
+    ])
 };
