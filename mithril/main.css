@@ -22,7 +22,7 @@
 
 #resume { height: 100%; }
 
-#resume embed {
-    width: 100vw;
+#resume embed, #resume iframe {
+    width: 100%;
     height: 100%;
 }
