@@ -6,18 +6,17 @@ export default {
     ]
 };
 
-var menuOpen = false;
-window.addEventListener("keydown", e => {
-    if(menuOpen && e.code === 'Escape') {menuOpen = false; m.redraw();}
-});
-
 var active = 'is-active';
+var menuOpen = false;
+var closeMenu = _ => { if(menuOpen) {menuOpen = false; m.redraw();} };
+window.addEventListener("keydown", e => { if(menuOpen && e.code === 'Escape') closeMenu(); });
+
 let header = {
     oninit: (vnode) => vnode.state.path = m.route.get(),
     menuOpen: false,
     view: (vnode) => m('nav.navbar', [
         m('.navbar-brand', [
-            m("a.navbar-item[href=/]", {oncreate: m.route.link}, 'mvndaai'),
+            m("a.navbar-item[href=/]", {oncreate: m.route.link, onclick: _ => closeMenu()}, 'mvndaai'),
             m('.navbar-burger.burger[data-target="navMenuExample"]', {
                 onclick: _ => menuOpen = !menuOpen,
                 class: menuOpen ? active : ''
@@ -25,8 +24,8 @@ let header = {
         ]),
         m('#navMenuExample.navbar-menu', {class: menuOpen ? active : ''}, [
             m('.navbar-start', [
-                m('a.navbar-item[href=/resume]', {oncreate: m.route.link, class: vnode.state.path === '/resume' ? active : ''}, 'Resume'),
-                m('a.navbar-item[href=/bio]', {oncreate: m.route.link, class: vnode.state.path === '/bio' ? active : ''}, 'Bio'),
+                m('a.navbar-item[href=/resume]', {class: vnode.state.path === '/resume' ? active : '', oncreate: m.route.link, onclick: _ => closeMenu()}, 'Resume'),
+                m('a.navbar-item[href=/bio]', {class: vnode.state.path === '/bio' ? active : '', oncreate: m.route.link, onclick: _ => closeMenu()}, 'Bio'),
             ]),
         ]),
     ])
