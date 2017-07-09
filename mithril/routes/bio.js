@@ -5,7 +5,7 @@ export default {
             m('strong', 'mvndaai '),
             'which is the is just my last name with the consonants before the vowels. ',
             'I am from southern California, but moved to Utah for school and never left. ',
-            'I eventually graduate from Cum Laude from Utah Valley University. ',
+            'I eventually graduated Cum Laude from Utah Valley University. ',
             'I am happily married. ',
             'I work as a Software Engineer and in general, love developing. '
         ])
