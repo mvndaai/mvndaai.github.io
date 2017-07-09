@@ -19,7 +19,8 @@
     */
 }
 
-.fa {
+
+footer .fa {
     font-size: var(--fa-size);
 }
 
