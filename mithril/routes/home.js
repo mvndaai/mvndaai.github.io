@@ -10,7 +10,11 @@ export default {
                 ]),
                 m('.column', [
                     m('a.subtitle[href="/unity/space-shooter/"][target="_blank"]','Space Shooter'),
-                    m('p','A game developed in Unity following their tutoria.'),
+                    m('p',[
+                        'A game developed in Unity following their',
+                        m('a[href="https://unity3d.com/learn/tutorials/projects/space-shooter-tutorial"]','tutorial'),
+                        '.'
+                    ]),
                 ])
             ]),
 
