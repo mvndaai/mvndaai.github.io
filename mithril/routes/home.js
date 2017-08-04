@@ -1,6 +1,8 @@
 export default {
     view: _ => m('.columns', [
         m('.column', [
+            m('h1.title,', 'Presentation'),
+            m('a[href=http://slides.com/mvndaai/why-use-mithriljs/live#/]', 'http://slides.com/mvndaai/why-use-mithriljs/live#/')
             m('h1.title', 'Spotlight'),
             m('p','These are things that I have recently which I think are notable:'),
             m('.columns.space', [
