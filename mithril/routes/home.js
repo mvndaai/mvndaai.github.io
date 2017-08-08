@@ -1,8 +1,6 @@
 export default {
     view: _ => m('.columns', [
         m('.column', [
-            m('h1.title,', 'Presentation'),
-            m('a[href=http://slides.com/mvndaai/why-use-mithriljs/live#/]', 'http://slides.com/mvndaai/why-use-mithriljs/live#/'),
             m('h1.title', 'Spotlight'),
             m('p','These are things that I have recently which I think are notable:'),
             m('.columns.space', [
@@ -17,9 +15,16 @@ export default {
                         m('a[href="https://unity3d.com/learn/tutorials/projects/space-shooter-tutorial"]','tutorial'),
                         '.'
                     ]),
-                ])
+                ]),
             ]),
-
+        ]),
+        m('.column', [
+            m('h1.title', 'Presentations'),
+            m('table', [
+                m('tr', [
+                    m('td', m('a[href=http://slides.com/mvndaai/why-use-mithriljs/live#/]', 'MithrilJS'))
+                ])
+            ])
         ]),
     ])
 };
