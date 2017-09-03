@@ -15,33 +15,36 @@
     /*Example changing variables using JavaScript: https://codepen.io/wesbos/pen/adQjoY*/
 }
 
-
-footer .fa {
-    font-size: var(--fa-size);
-}
-
 #content {
     padding: var(--content-padding);
     background-color: var(--background-color);
     min-height: var(--content-height);
 }
 
-.footer {
-    padding: var(--footer-padding-size) 0;
-}
-
+.footer .fa { font-size: var(--fa-size); }
+.footer { padding: var(--footer-padding-size) 0; }
 .footer .social a {
     margin: 0 1rem;
     color: darkgrey;
 }
 
-#resume { height: 100%; }
+.space { padding-top: 1rem; }
 
+#resume { height: 100%; }
 #resume embed, #resume iframe {
     width: 100%;
     height: calc(var(--content-height) - 2.5rem);
 }
 
-.space {
-    padding-top: 1rem;
+#jokes .spacer{ padding: .5rem; }
+#jokes .columns { padding-bottom: 0; }
+#jokes .column { margin: 0 1rem 1rem; }
+#jokes .box .button {margin: 0 .2rem;}
+#jokes .climber .fa{
+  font-size: 10px;
+  cursor: pointer;
+}
+#jokes .climber {
+  font-size: 20px;
+  border: 1px solid lightgray;
 }
