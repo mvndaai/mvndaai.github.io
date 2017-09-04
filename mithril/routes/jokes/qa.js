@@ -19,5 +19,9 @@ export default [
   {
     "q":"What do you call security guards at the Samsung store?",
     "a":"Guardians of the Galaxy"
+  },
+  {
+    "q":"What is red and bad for your teeth?",
+    "a":"A brick"
   }
 ];
