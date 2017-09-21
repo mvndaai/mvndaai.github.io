@@ -23,5 +23,9 @@ export default [
   {
     "q":"What is red and bad for your teeth?",
     "a":"A brick"
+  },
+  {
+    "q":"What is green, fuzzy, has four legs, and would kill you if it fell out of a tree?",
+    "a":"A pool table"
   }
 ];
