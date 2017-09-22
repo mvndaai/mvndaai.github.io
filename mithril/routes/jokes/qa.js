@@ -27,5 +27,21 @@ export default [
   {
     "q":"What is green, fuzzy, has four legs, and would kill you if it fell out of a tree?",
     "a":"A pool table"
+  },
+  {
+    "q":"How many apples grow on a tree?",
+    "a":"All of them"
+  },
+  {
+    "q":"What kind of lights were on Noah's ark?",
+    "a":"Flood lights"
+  },
+  {
+    "q":"What is a missionary's favorite kind of car?",
+    "a":"A convertible"
+  },
+  {
+    "q":"How do you make a kleenex dance?",
+    "a":"Put a little boogie in it"
   }
 ];
