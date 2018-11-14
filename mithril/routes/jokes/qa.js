@@ -44,4 +44,9 @@ export default [
     "q":"How do you make a kleenex dance?",
     "a":"Put a little boogie in it"
   }
+  ,
+  {
+    "q":"What's a pirate's favorite letter?",
+    "a":"Some would say R, others would say the C, but it's actually P, because without it they'd just be, 'irate'"
+  }
 ];
