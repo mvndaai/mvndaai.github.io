@@ -1,6 +1,8 @@
 export default {
     view: _ => m('#bio.content.columns', [
-        m('img.column [src="/images/professional.jpg"][aria-hidden="true"]'),
+        m('.column',
+            m('img[src="/images/professional.jpg"][aria-hidden="true"]'),
+        ),
         m('.column ', m('p', [
             'My name is Jason Mavandi. My name on the Internet is ',
             m('strong', 'mvndaai '),

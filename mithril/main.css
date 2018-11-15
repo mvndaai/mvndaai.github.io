@@ -28,8 +28,6 @@
     color: darkgrey;
 }
 
-.space { padding-top: 1rem; }
-
 #resume { height: 100%; }
 #resume embed, #resume iframe {
     width: 100%;
@@ -47,4 +45,10 @@
 #jokes .climber {
   font-size: 20px;
   border: 1px solid lightgray;
+}
+
+.subtitle-link {
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1.25;
 }
