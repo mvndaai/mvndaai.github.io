@@ -36,12 +36,12 @@ let header = {
 let footer = {
     view: _ => m('footer.footer', m('.container', m('.content.has-text-centered', [
         m('.social',[
-            m('a[href="https://github.com/mvndaai"][target="_blank"]', m('i.fa.fa-github[aria-hidden="true"]')),
-            m('a[href="https://www.linkedin.com/in/mvndaai/"][target="_blank"]', m('i.fa.fa-linkedin[aria-hidden="true"]')),
-            m('a[href="http://www.facebook.com/mvndaai"][target="_blank"]', m('i.fa.fa-facebook-official[aria-hidden="true"]')),
-            m('a[href="https://twitter.com/mvndaai"][target="_blank"]', m('i.fa.fa-twitter[aria-hidden="true"]')),
-            m('a[href="https://plus.google.com/u/0/+JasonMavandi"][target="_blank"]', m('i.fa.fa-google-plus[aria-hidden="true"]')),
-            m('a[href="https://www.instagram.com/mvndaai/"][target="_blank"]', m('i.fa.fa-instagram[aria-hidden="true"]')),
+            m('a[href="https://github.com/mvndaai"][target="_blank"]', m('i.fab.fa-github[aria-hidden="true"]')),
+            m('a[href="https://www.linkedin.com/in/mvndaai/"][target="_blank"]', m('i.fab.fa-linkedin[aria-hidden="true"]')),
+            m('a[href="http://www.facebook.com/mvndaai"][target="_blank"]', m('i.fab.fa-facebook[aria-hidden="true"]')),
+            m('a[href="https://twitter.com/mvndaai"][target="_blank"]', m('i.fab.fa-twitter[aria-hidden="true"]')),
+            m('a[href="https://plus.google.com/u/0/+JasonMavandi"][target="_blank"]', m('i.fab.fa-google-plus[aria-hidden="true"]')),
+            m('a[href="https://www.instagram.com/mvndaai/"][target="_blank"]', m('i.fab.fa-instagram[aria-hidden="true"]')),
         ])
     ])))
 };
