@@ -24,7 +24,7 @@ export default {
                     m('td', m('a[href=https://docs.google.com/presentation/d/1aRk_HT2aSaezLXaBHRjgheH02IacW94UBlejZCcnRWU/edit?usp=sharing][target=_blank]', 'WebAuthn'))
                 ]),
                 m('tr', [
-                    m('td', m('a[href=http://slides.com/mvndaai/why-use-mithriljs/live#/][target=_blank]', 'MithrilJS'))
+                    m('td', m('a[href=http://slides.com/mvndaai/why-use-mithriljs/][target=_blank]', 'MithrilJS'))
                 ])
             ])
         ]),
