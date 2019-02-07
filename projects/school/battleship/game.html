@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Battle Ship</title>
+        <meta charset="UTF-8">
+        <link href="./game.css" rel="stylesheet" type="text/css">
+        <script src="./game.js" type="text/javascript"></script>
+    </head>
+
+    <body>
+
+        <div id="setupContainer" class="welcome hidden">
+            <div class ="center background">
+                <h2>Welcome to Battleship!</h2>
+                <p>Choose board size:
+                    <select name="sizeDropdown" id="sizeDropdown">
+                        <option value="6">6x6</option>
+                        <option value="7">7x7</option>
+                        <option value="8" selected>8x8</option>
+                        <option value="9">9x9</option>
+                        <option value="10">10x10</option>
+                    </select>
+                </p>
+                <button id="startBtn">Start</button>
+                <button id="demoBtn">Load Demo State</button>
+                <input type="button" value="Upload State" onclick="document.getElementById('selectedFile').click();" />
+                <br><input class="hidden" type="file" id="selectedFile"/>
+            </div>
+        </div>
+
+        <div id="gameContainer" class="gameboard hidden centerText">
+            <div class="center background">
+                <table style="width:100%">
+                    <tr><td class="center" colspan="2">
+                        <a href="./index.html">Check out the rules</a>
+                    </td></tr>
+                    <tr >
+                        <td class="center">
+                            <h3>Computer Ships</h3>
+                            <div id="boardComp" class="center">Error Generating Board</div>
+                            <p>Ships Remaining: <span id="shipsComp">-</span></p>
+                        </td>
+
+                        <td class="center">
+                            <h3>User Ships</h3>
+                            <div id="boardUser" class="center">Error Generating Board</div>
+                            <p>Ships Remaining: <span id="shipsUser">-</span></p>
+                        </td>
+                    </tr>
+                    <tr><td class="center" colspan="2">
+                        <!--<button id="moveComp">Move Computer</button>-->
+                        <span id="download"></span>
+                        <button class="reset">Reset</button>
+                    </td></tr>
+                </table>
+            </div>
+        </div>
+
+        <div id="endContainer" class="hidden center background">
+            <h2><span id="winner">*Error*</span> Won</h2>
+            <p>Totals:<br>
+                [<span id="userWins">#</span>] User ---
+                [<span  id="compWins">#</span>] Computer
+            </p>
+            <button class="reset">Reset</button>
+
+        </div>
+
+        <div id="credBox" class="credentials hidden">
+            <h5>Credentials:</h5><button id="clearCredsBtn">clear</button>
+            <br><span id="credData"></span>
+        </div>
+    </body>
+</html>

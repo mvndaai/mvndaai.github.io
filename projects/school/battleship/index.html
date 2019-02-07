@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Battle Ship</title>
+        <meta charset="UTF-8">
+        <link href="./index.css" rel="stylesheet" type="text/css">
+        <script src="./index.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="login" id="Credentials">
+            <input type="text" placeholder="username" id="username"/>
+            <input type="password" placeholder="password" id="password"/>
+            <button id="loginBtn">log in</button>
+            <a href="http://universe.tc.uvu.edu/cs2550/assignments/PasswordCheck/list.php">help</a>
+            <br><br><span class="hidden" id="loginText"></span>
+        </div>
+
+        <div class="center">
+            <img src="http://allthingsclipart.com/03/battleship.06.jpg" title="Thank you allthingsclipart.com for the picture" class="battleShipPic">
+            <!-- <a href="http://allthingsclipart.com/03/battleship.clipart.htm">Picture Gallery</a> -->
+            <h1>Battle Ship</h1>
+            <a href="./game.html">Play Battleship</a><br>
+            <a href="http://smile.amazon.com/Hasbro-A3264-Battleship-Game/dp/B00C0ULS3G/" target="_blank">Buy the Board Game</a>
+            <br><br>
+
+            <div class="ruleBox">
+                <h2>Documentation</h2>
+                    <p>The page <a href="./documentation.html">documenation.html</a> shows grading requirements.</p>
+
+                <h2>Setup</h2>
+                <ul>
+                    <li>Press the "Start" button to have ships randomly placed</li>
+                    <li>Press "Load Demo State" to load form the save.json file on the server</li>
+                    <li>Press "Upload State" to upload from a save file.</li>
+                </ul>
+
+                <h2>Gameplay</h2>
+                <ul>
+                    <li>This is a turn base gamed.</li>
+                    <li>User chooses a space to attack on the opponent's field.</li>
+                    <li>If attack is a hit, an orange X is displayed, if a miss a gray X is displayed.</li>
+                    <li>After the user's turn computer attacks automatically.</li>
+                    <li>When all the ships of one player are destroyed, that player is defeated.</li>
+                    <li>If you close the browser and open a new one the game will return to the place you closed from.</li>
+                    <li>At any point you can download the state of the game to load from later.</li>
+                </ul>
+            </div>
+            <br>
+
+            <div class="ruleBox">
+                <h2>Software Design</h2>
+
+                <h3>Objects:</h3>
+                <h4>Game</h4>
+                <ul>
+                    <li><strong>boardSize:</strong> int of lenght/width of the board</li>
+                    <li><strong>players:</strong> an object that holds to players: user, comp</li>
+                    <li><strong>winner:</strong> a string that is null unless someone has won</li>
+                    <li class="noBullet">Ex. {boardSize:8, players:{user:{},comp:{}}, winner:null</li>
+                </ul>
+
+                <h4>Player</h4>
+                <ul>
+                    <li><strong>name:</strong> name of player</li>
+                    <li><strong>visibility:</strong> bool if the ships are displayed on the board</li>
+                    <li><strong>ships:</strong> array of ship arrays Ex. [[[0,0],[0.1]],[1,2],[2,2]]</li>
+                    <li><strong>attacks:</strong> array of attack locations Ex: [x,y]</li>
+                    <li><strong>hits:</strong> array of hit locations Ex: [x,y]</li>
+                    <li class="noBullet">Ex. {name:"user", visibilty:true, ships:[], attacks:[], hits:[]}</li>
+                </ul>
+
+                <h3>Functions / Methods:</h3>
+                <h4>Model: var m = {}</h4>
+                <ul>
+                  <li><strong>m.createPlayer(name,visibility)</strong> </li><li class="noBullet">- creates a player object with name and visibilty true if you want ships displayed</li>
+                  <li><strong>m.addRandomShips(shipArray)</strong> </li><li class="noBullet">- adds all the random ships needed for the board size</li>
+                  <li><strong>m.addRandomShip(size,shipArray)</strong> </li><li class="noBullet">-  adds on random ship not in conflict with others and on the board</li>
+                  <li><strong>m.locationOnBoard(location)</strong> </li><li class="noBullet">- returns a boolean of the location is on the gameboard</li>
+                  <li><strong>m.checkForShip(location,shipArray)</strong> </li><li class="noBullet">- check for a ship at the location given</li>
+                  <li><strong>m.sameLocations(a,b)</strong> </li><li class="noBullet">- returns a boolean of the compares locations</li>
+                  <li><strong>m.createShip(headLocation,horizontalBool,length)</strong> </li><li class="noBullet">- creates a ship array from the head point with a length and orientation givin</li>
+                  <li><strong>m.computerMove()</strong> </li><li class="noBullet">- starts and attack by the computer</li>
+                  <li><strong>m.checkNeighbors(locA,locB)</strong> </li><li class="noBullet">- returns boolean of if  two locations are next to each other</li>
+                  <li><strong>m.neighborsMove(player,opponant,locA,locB)</strong> </li><li class="noBullet">- returns array of avaliable moves in the same row or column if two locations are neigbors</li>
+                  <li><strong>m.allDirections(location)</strong> </li><li class="noBullet">- returns array of locations avaliable surronding a location</li>
+                  <li><strong>m.onGameBoard(location)</strong> </li><li class="noBullet">- returns a boolean of if a location is on the gameboard</li>
+                  <li><strong>m.avaliableMove(player,location)</strong> </li><li class="noBullet">- returns a boolean of if a player has already attempted to attack a location</li>
+                  <li><strong>m.randomAvaliable(player)</strong> </li><li class="noBullet">- returns a random location that is avaliable</li>
+                  <li><strong>m.checkEndGame()</strong> </li><li class="noBullet">- checks if somone has sunk all their opponant's ships</li>
+                  <li><strong>m.randomSort()</strong> </li><li class="noBullet">- a random sort to use in .sort() on an array</li>
+                  <li><strong>m.shipsRemaining(player)</strong> </li><li class="noBullet">- returns an int of ships unsunken</li>
+                  <li><strong>m.getOpponant(player)</strong> </li><li class="noBullet">- returns the player object of the opponant of player given</li>
+                  <li><strong>m.attack(player,location)</strong> </li><li class="noBullet">- attacks a location</li>
+                </ul>
+
+                <h4>View: var v = {}</h4>
+                <ul>
+                  <li><strong>v.setup()</strong> </li><li class="noBullet">- shows the setup screen</li>
+                  <li><strong>v.toggleContainer(id)</strong> </li><li class="noBullet">- toggles the container to be hidden or not based on ID</li>
+                  <li><strong>v.toggleSetupContainer()</strong> </li><li class="noBullet">- toggles the setup container</li>
+                  <li><strong>v.toggleGameContainer()</strong> </li><li class="noBullet">- toggles the game container</li>
+                  <li><strong>v.toggleEndContainer()</strong> </li><li class="noBullet">- toggles the end of game container</li>
+                  <li><strong>v.drawGameboard(size,user,board,clickable)</strong> </li><li class="noBullet">- draws a grid to use for a gameboard</li>
+                  <li><strong>v.drawShips(board,shipArray)</strong> </li><li class="noBullet">- draws all the sips of player</li>
+                  <li><strong>v.drawShip(board,ship)</strong> </li><li class="noBullet">- draws one ship</li>
+                  <li><strong>v.shipsRemaining(opponant,elementID)</strong> </li><li class="noBullet">- displays the number of ships remaining for a player</li>
+                  <li><strong>v.updateShipCounter()</strong> </li><li class="noBullet">- updates the ships remaining for all players</li>
+                  <li><strong>v.updateView()</strong> </li><li class="noBullet">- updates the view when the game is started</li>
+                  <li><strong>v.displayHit(board,location)</strong> </li><li class="noBullet">- draws an orange X in the location of a hit</li>
+                  <li><strong>v.displayMiss(board,location)</strong> </li><li class="noBullet">- draws an gray X in the location of a hit</li>
+                  <li><strong>v.endGame(name)</strong> </li><li class="noBullet">- displays the end of game container with the winner displayed</li>
+                  <li><strong>v.hideAllSections()</strong> </li><li class="noBullet">- hides all containers</li>
+                  <li><strong>v.getBoardCell (boardEl, row, col)</strong> </li><li class="noBullet">- returns the location of a cell when clicked Ex. [5,7]</li>
+                  <li><strong>v.updateWins()</strong> </li><li class="noBullet">- displays the wins of the user and computer using localStorage</li>
+                </ul>
+
+                <h4>Controller: var c = { boards:{} }</h4>
+                <ul>
+                  <li><strong>c.setup()</strong> </li><li class="noBullet">- sets up the game</li>
+                  <li><strong>c.setupSetupContainer()</strong> </li><li class="noBullet">- loads the set up container with listeners</li>
+                  <li><strong>c.clickStart()</strong> </li><li class="noBullet">- creates players when the game is started</li>
+                  <li><strong>c.startGame()</strong> </li><li class="noBullet">- starts the game either new or loaded</li>
+                  <li><strong>c.attack(player,location)</strong> </li><li class="noBullet">- attacks a location</li>
+                  <li><strong>c.clickableTables()</strong> </li><li class="noBullet">- check for the class "clickable" and calls clickableTable on it</li>
+                  <li><strong>c.clickableTable(tableElement)</strong> </li><li class="noBullet">- makes the table clickable to a user</li>
+                  <li><strong>c.attackSequence(player,userAttackLocation)</strong> </li><li class="noBullet">- computer attack after user if the game is not over</li>
+                  <li><strong>c.reset()</strong> </li><li class="noBullet">- resets the game object to empty and lets you choose game size again</li>
+                  <li><strong>c.saveGame()</strong> </li><li class="noBullet">- save the current state of the game to localStorage</li>
+                  <li><strong>c.loadFromLocalStorage()</strong> </li><li class="noBullet">- loads a game from localStorage</li>
+                  <li><strong>c.loadformJson(json)</strong> </li><li class="noBullet">- loads a game from JSON</li>
+                  <li><strong>c.checkEndGame()</strong> </li><li class="noBullet">- checks m.checkEndGame to see if the game is over</li>
+                  <li><strong>c.endGame()</strong> </li><li class="noBullet">- saves a winner and updates the UI</li>
+                  <li><strong>c.saveWins()</strong> </li><li class="noBullet">- saves the winner to localStorage</li>
+                  <li><strong>c.drawLoadedAttacks(player,opponantBoard)</strong> </li><li class="noBullet">- draws all attacks from a loaded game</li>
+                  <li><strong>c.updateDownloadStateButton()</strong> </li><li class="noBullet">- updates the data object for the download state button to have the current state</li>
+                  <li><strong>c.clickStartFromDemoSave()</strong> </li><li class="noBullet">- starts the game using the state from save.json</li>
+                  <li><strong>c.onFileUpload()</strong> </li><li class="noBullet">- loads a game upon uploading a file</li>
+                </ul>
+
+                <h3>Other Funtions</h3>
+                <ul>
+                  <li><strong>randomBool()</strong> </li><li class="noBullet">- returns true or false randomly</li>
+                  <li><strong>credentialInfo()</strong> </li><li class="noBullet">- displays logged in info if user logged in</li>
+                  <li><strong>clearCredentials()</strong> </li><li class="noBullet">- clears the data of a logged in user</li>
+                  <li><strong>Array.prototype.pushUnique(item)</strong> </li><li class="noBullet">- adds an item to an array only if it is unique</li>
+                </ul>
+
+                <h3>Notes:</h3>
+                <ul>
+                    <li>The ship image can be found <a href="http://allthingsclipart.com/03/battleship.clipart.htm">here</a></li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

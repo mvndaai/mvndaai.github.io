@@ -8,7 +8,7 @@ export default {
                     m('p','Post test results to Testrail using NodeJS through promises.'),
                 ]),
                 m('.column', [
-                    m('a..subtitle-link[href="/unity/space-shooter/"][target="_blank"]', 'Space Shooter'),
+                    m('a..subtitle-link[href="/projects/unity/space-shooter/"][target="_blank"]', 'Space Shooter'),
                     m('p',[
                         'A game developed in Unity following their ',
                         m('a[href="https://unity3d.com/learn/tutorials/projects/space-shooter-tutorial"]','tutorial'),
