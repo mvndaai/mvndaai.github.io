@@ -1,6 +1,6 @@
 :root {
-    /*--background-color: #addcb7;*/
     --background-color: #e9f1fc;
+    --link-color: #174c9b;
     --navbar-height: 3.25rem;
     --fa-size: 1.2rem;
     --footer-padding-size: 1rem;
@@ -13,6 +13,10 @@
         - var(--content-padding)
     );
     /*Example changing variables using JavaScript: https://codepen.io/wesbos/pen/adQjoY*/
+}
+
+a {
+    color: var(--link-color);
 }
 
 #content {
