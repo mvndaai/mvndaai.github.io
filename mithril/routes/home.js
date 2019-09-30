@@ -4,6 +4,10 @@ export default {
             m('h1.title', 'Spotlight'),
             m('.columns', [
                 m('.column', [
+                    m('a.subtitle-link[href="https://github.com/mvndaai/ctxerr"][target="_blank"][rel="noopener"]','ctxerr'),
+                    m('p','Go package to help with HTTP errors.'),
+                ]),
+                m('.column', [
                     m('a.subtitle-link[href="https://github.com/mvndaai/testrail-promise"][target="_blank"][rel="noopener"]','Testrail Promise'),
                     m('p','Post test results to Testrail using NodeJS through promises.'),
                 ]),
