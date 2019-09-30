@@ -4,7 +4,7 @@ export default {
             m('h1.title', 'Spotlight'),
             m('.columns', [
                 m('.column', [
-                    m('a.subtitle-link[href="https://github.com/mvndaai/ctxerr"][target="_blank"][rel="noopener"]','ctxerr'),
+                    m('a.subtitle-link[href="https://godoc.org/github.com/mvndaai/ctxerr"][target="_blank"][rel="noopener"]','ctxerr'),
                     m('p','Go package to help with HTTP errors.'),
                 ]),
                 m('.column', [
