@@ -25,7 +25,11 @@ export default {
             m('h1.title', 'Presentations'),
             m('table', [
                 m('tr', [
-                    m('td', m('a[href=https://slides.com/mvndaai/go-errors][target=_blank][rel="noopener"]', 'Go Errors'))
+                    m('td', [
+                        m('a[href=https://slides.com/mvndaai/go-errors][target=_blank][rel="noopener"]', 'Go Errors'),
+                        m.trust('&nbsp;'),
+                        m('a[href=https://www.youtube.com/watch?v=H1gwKI2V7YA][target=_blank][rel="noopener"][aria-label="go errors video"]', m('i.fab.fa-youtube[aria-hidden="true"]')),
+                    ]),
                 ]),
                 m('tr', [
                     m('td', m('a[href=https://docs.google.com/presentation/d/1aRk_HT2aSaezLXaBHRjgheH02IacW94UBlejZCcnRWU/edit?usp=sharing][target=_blank][rel="noopener"]', 'WebAuthn'))
