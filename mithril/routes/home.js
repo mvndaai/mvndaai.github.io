@@ -2,12 +2,12 @@ export default {
     view: _ => m('.columns', [
         m('.column', [
             m('h1.title', 'Spotlight'),
-            m('.columns', [
-                m('.column.is-full', [
-                    m('a.subtitle-link[href="https://jojorgensenvictimlesscrimechallenge.com/"][target="_blank"][rel="noopener"]','#JoJorgensenVictimlessCrimeChallenge'),
-                    m('p',"I made a challenge to get Jo's name out there."),
-                ]),
-            ]),
+            // m('.columns', [
+            //     m('.column.is-full', [
+            //         m('a.subtitle-link[href="https://jojorgensenvictimlesscrimechallenge.com/"][target="_blank"][rel="noopener"]','#JoJorgensenVictimlessCrimeChallenge'),
+            //         m('p',"I made a challenge to get Jo's name out there."),
+            //     ]),
+            // ]),
             m('.columns', [
                 m('.column', [
                     m('a.subtitle-link[href="https://godoc.org/github.com/mvndaai/ctxerr"][target="_blank"][rel="noopener"]','ctxerr'),
