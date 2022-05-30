@@ -1,0 +1,8 @@
+#theme_changer .split {
+    display: flex;
+    justify-content: space-between;
+}
+
+#theme_changer .split *:not(:first-child) {
+    margin-left: 16px;
+}

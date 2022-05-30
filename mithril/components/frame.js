@@ -1,3 +1,14 @@
+import theme_changer from '/theme_changer/theme_changer.js';
+theme_changer.start({
+    ignoreKeys: [
+        '--navbar-height',
+        '--fa-size',
+        '--footer-padding-size',
+        '--content-padding',
+        '--content-height'
+    ],
+});
+
 export default {
     view: (vnode) => [
         m(header),

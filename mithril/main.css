@@ -1,6 +1,10 @@
 :root {
-    --background-color: #e9f1fc;
-    --link-color: #174c9b;
+    --content-background-color: #e9f1fc;
+    --content-text-color: black;
+    --content-link-color: #174c9b;
+    --footer-icon-color: darkgrey;
+
+    /* Hidden in theme changer */
     --navbar-height: 3.25rem;
     --fa-size: 1.2rem;
     --footer-padding-size: 1rem;
@@ -12,24 +16,24 @@
         - var(--fa-size)
         - var(--content-padding)
     );
-    /*Example changing variables using JavaScript: https://codepen.io/wesbos/pen/adQjoY*/
 }
 
 a {
-    color: var(--link-color);
+    color: var(--content-link-color);
 }
 
 #content {
     padding: var(--content-padding);
-    background-color: var(--background-color);
+    background-color: var(--content-background-color);
     min-height: var(--content-height);
+    color: var(--content-text-color);
 }
 
 .footer .fa { font-size: var(--fa-size); }
 .footer { padding: var(--footer-padding-size) 0; }
 .footer .social a {
     margin: 0 1rem;
-    color: darkgrey;
+    color: var(--footer-icon-color);
 }
 
 #resume { height: 100%; }
