@@ -1,13 +1,14 @@
 export default {
     view: _ => m('.columns', [
         m('.column', [
-            m('h1.title', 'Spotlight'),
+            
             // m('.columns', [
             //     m('.column.is-full', [
             //         m('a.subtitle-link[href="https://jojorgensenvictimlesscrimechallenge.com/"][target="_blank"][rel="noopener"]','#JoJorgensenVictimlessCrimeChallenge'),
             //         m('p',"I made a challenge to get Jo's name out there."),
             //     ]),
             // ]),
+            m('h1.title', 'Spotlight'),
             m('.columns', [
                 m('.column', [
                     m('a.subtitle-link[href="https://godoc.org/github.com/mvndaai/ctxerr"][target="_blank"][rel="noopener"]','ctxerr'),
@@ -18,12 +19,27 @@ export default {
                     m('p','Post test results to Testrail using NodeJS through promises.'),
                 ]),
                 m('.column', [
-                    m('a..subtitle-link[href="/projects/unity/space-shooter/"][target="_blank"][rel="noopener"]', 'Space Shooter'),
+                    m('a.subtitle-link[href="/projects/unity/space-shooter/"][target="_blank"][rel="noopener"]', 'Space Shooter'),
                     m('p',[
                         'A game developed in Unity following their ',
                         m('a[href="https://unity3d.com/learn/tutorials/projects/space-shooter-tutorial"]','tutorial'),
                         '.'
                     ]),
+                ]),
+            ]),
+            m('h1.title', 'Fun Projects'),
+            m('.columns', [
+                m('.column', [
+                    m('a.subtitle-link[href="https://mvndaai.com/go_wasm_tools/"][target="_blank"][rel="noopener"]','Go WASM Tools'),
+                    m('p','Tools that I use occassionally made Go and WASM.'),
+                ]),
+                m('.column', [
+                    m('a.subtitle-link[href="https://mvndaai.com/kaprekar_wasm/"][target="_blank"][rel="noopener"]',"Kaprekar's Constant"),
+                    m('p','Find the steps to the constant.'),
+                ]),
+                m('.column', [
+                    m('a.subtitle-link[href="https://mvndaai.com/css_variables/"][target="_blank"][rel="noopener"]', 'CSS Variables'),
+                    m('p','Dynamic theming built into all browsers.'),
                 ]),
             ]),
         ]),
