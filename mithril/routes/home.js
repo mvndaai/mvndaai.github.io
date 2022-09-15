@@ -31,7 +31,7 @@ export default {
             m('.columns', [
                 m('.column', [
                     m('a.subtitle-link[href="https://mvndaai.com/go_wasm_tools/"][target="_blank"][rel="noopener"]','Go WASM Tools'),
-                    m('p','Tools that I use occassionally made Go and WASM.'),
+                    m('p','Tools that I use occassionally made using Go and WASM.'),
                 ]),
                 m('.column', [
                     m('a.subtitle-link[href="https://mvndaai.com/kaprekar_wasm/"][target="_blank"][rel="noopener"]',"Kaprekar's Constant"),
