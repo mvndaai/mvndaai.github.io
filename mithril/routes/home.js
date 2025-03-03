@@ -41,6 +41,10 @@ export default {
                     m('a.subtitle-link[href="https://mvndaai.com/css_variables/"][target="_blank"][rel="noopener"]', 'CSS Variables'),
                     m('p','Dynamic theming built into all browsers.'),
                 ]),
+                m('.column', [
+                    m('a.subtitle-link[href="https://knownanywhere.com/"][target="_blank"][rel="noopener"]', 'Known Anywhere'),
+                    m('p','Place to connect a user with their links.'),
+                ]),
             ]),
         ]),
         m('.column', [
