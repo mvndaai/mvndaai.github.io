@@ -37,6 +37,7 @@ let header = {
             m('.navbar-start', [
                 m('a.navbar-item[href=/resume]', {class: vnode.state.path === '/resume' ? active : '', oncreate: m.route.link, onclick: _ => closeMenu()}, 'Resume'),
                 m('a.navbar-item[href=/bio]', {class: vnode.state.path === '/bio' ? active : '', oncreate: m.route.link, onclick: _ => closeMenu()}, 'Bio'),
+                m('a.navbar-item[href=/history]', {class: vnode.state.path === '/history' ? active : '', oncreate: m.route.link, onclick: _ => closeMenu()}, 'History'),
             ]),
         ]),
     ])

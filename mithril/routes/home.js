@@ -15,24 +15,14 @@ export default {
                     m('p','Go package to help with HTTP errors.'),
                 ]),
                 m('.column', [
-                    m('a.subtitle-link[href="https://github.com/mvndaai/testrail-promise"][target="_blank"][rel="noopener"]','Testrail Promise'),
-                    m('p','Post test results to Testrail using NodeJS through promises.'),
-                ]),
-                m('.column', [
-                    m('a.subtitle-link[href="/projects/unity/space-shooter/"][target="_blank"][rel="noopener"]', 'Space Shooter'),
-                    m('p',[
-                        'A game developed in Unity following their ',
-                        m('a[href="https://unity3d.com/learn/tutorials/projects/space-shooter-tutorial"]','tutorial'),
-                        '.'
-                    ]),
-                ]),
-            ]),
-            m('h1.title', 'Fun Projects'),
-            m('.columns', [
-                m('.column', [
                     m('a.subtitle-link[href="https://mvndaai.com/go_wasm_tools/"][target="_blank"][rel="noopener"]','Go WASM Tools'),
                     m('p','Tools that I use occassionally made using Go and WASM.'),
                 ]),
+                
+            ]),
+            m('h1.title', 'Fun Projects'),
+            m('.columns', [
+                
                 m('.column', [
                     m('a.subtitle-link[href="https://mvndaai.com/kaprekar_wasm/"][target="_blank"][rel="noopener"]',"Kaprekar's Constant"),
                     m('p','Find the steps to the constant.'),
@@ -40,10 +30,6 @@ export default {
                 m('.column', [
                     m('a.subtitle-link[href="https://mvndaai.com/css_variables/"][target="_blank"][rel="noopener"]', 'CSS Variables'),
                     m('p','Dynamic theming built into all browsers.'),
-                ]),
-                m('.column', [
-                    m('a.subtitle-link[href="https://knownanywhere.com/"][target="_blank"][rel="noopener"]', 'Known Anywhere'),
-                    m('p','Place to connect a user with their links.'),
                 ]),
             ]),
         ]),
