@@ -16,7 +16,7 @@ export default {
                 m('li', m('a[href="/projects/school/battleship"][target="_blank"]', 'Battle Ship')),
                 m('li', m('a[href="https://github.com/mvndaai/testrail-promise"][target="_blank"]', 'Testrail Promise')),
                 m('li', m('a[href="/projects/unity/space-shooter/"][target="_blank"]', 'Space Shooter')),
-                m('li', m('a[href="https://github.com/mvndaai/bom_money"][target="_blank"]', 'BOM Money')),
+                m('li', m('a[href="https://github.com/mvndaai/bom_money"][target="_blank"]', 'BoM Money')),
                 m('li', m('a[href="https://github.com/mvndaai/dev_lessons"][target="_blank"]', 'Dev Lessons')),
                 m('li', m('a[href="https://github.com/mvndaai/qa_lessons"][target="_blank"]', 'QA Lessons')),
                 //m('li', m('a[href="/jo-challenge"][target="_blank"]', 'Jo Challenge')),
