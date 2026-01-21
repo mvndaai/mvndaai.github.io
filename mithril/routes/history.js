@@ -29,6 +29,12 @@ export default {
                 m('li', m('a[href="https://github.com/mvndaai/money"][target="_blank"]', 'money')),
             ]),
             m('ul', [
+                m('h3', 'Recipies'),
+                m('li', m('a[href=https://mvndaai.blogspot.com/2012/06/pumpkin-chocolate-chip-cookies.html][target=_blank][rel="noopener"]', 'Pumpkin Chocolate Chip Cookies')),
+                m('li', m('a[href=https://mvndaai.blogspot.com/2013/06/banana-bread.html][target=_blank][rel="noopener"]', 'Banana Bread')),
+                m('li', m('a[href=https://mvndaai.blogspot.com/2019/12/chocolate-peppermint-blossoms.html][target=_blank][rel="noopener"]', 'Chocolate Peppermint Blossoms')),
+            ]),
+            m('ul', [
                 m('h3', 'Presentations'),
                 m('li', [
                         m('a[href=https://slides.com/mvndaai/go-errors][target=_blank][rel="noopener"]', 'Go Errors'),

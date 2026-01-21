@@ -4,8 +4,12 @@ export default {
             m('h1.title', 'Spotlight'),
             m('.columns', [
                 m('.column', [
+                    m('a.subtitle-link[href="https://mvndaai.com/sudoku_hints/"][target="_blank"][rel="noopener"]','Sudoku Solver'),
+                    m('p','Get hints when you are stuck on a sudoku.'),
+                ]),
+                m('.column', [
                     m('a.subtitle-link[href="https://mvndaai.com/go_wasm_tools/"][target="_blank"][rel="noopener"]','Go WASM Tools'),
-                    m('p','Tools that I use occassionally made using Go and WASM.'),
+                    m('p','Parsing tools that I use made using Go and WASM.'),
                 ]),
                 m('.column', [
                     m('a.subtitle-link[href="https://godoc.org/github.com/mvndaai/ctxerr"][target="_blank"][rel="noopener"]','ctxerr'),
