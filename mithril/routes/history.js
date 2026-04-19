@@ -35,6 +35,10 @@ export default {
                 m('li', m('a[href=https://mvndaai.blogspot.com/2019/12/chocolate-peppermint-blossoms.html][target=_blank][rel="noopener"]', 'Chocolate Peppermint Blossoms')),
             ]),
             m('ul', [
+                m('h3', 'AI Projects'),
+                m('li', m('a[href=/flutter-music][target=_blank][rel="noopener"]', 'Sheet Music Colorizer App')),
+            ]),
+            m('ul', [
                 m('h3', 'Presentations'),
                 m('li', [
                         m('a[href=https://slides.com/mvndaai/go-errors][target=_blank][rel="noopener"]', 'Go Errors'),
