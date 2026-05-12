@@ -36,7 +36,7 @@ export default {
             ]),
             m('ul', [
                 m('h3', 'AI Projects'),
-                m('li', m('a[href=/flutter-music][target=_blank][rel="noopener"]', 'Sheet Music Colorizer App')),
+                m('li', m('a[href=https://funsheetmusic.com][target=_blank][rel="noopener"]', 'Fun Sheet Music')),
             ]),
             m('ul', [
                 m('h3', 'Presentations'),
