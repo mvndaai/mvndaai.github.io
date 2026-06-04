@@ -1,9 +1,11 @@
 import qa from '/mithril/routes/jokes/qa.js';
 import kk from '/mithril/routes/jokes/knock-knock.js';
+import o from '/mithril/routes/jokes/other.js';
 
 var alljokes = []
   .concat(qa.map(v => { v.type = 'qa'; return v; }))
   .concat(kk.map(v => { v.type = 'kk'; return v; }))
+  .concat(o)
 ;
 
 const questionAnswerFormat = j => [
@@ -18,6 +20,15 @@ const knockKnockFormat = j => [
   m('p.is-pulled-right',`${j.a} who?`), m('.spacer'),
   m('p',j.b), m('br')
 ];
+
+const otherFormat = j => {
+  switch (j.type){
+    case 'oneliner': return m('p',j.line);
+    case 'pause': return [m('p',j.before), m('.spacer'), m('p',j.after)];
+  }
+  console.log(j);
+  return m('p', "missing config for format " + j.type);
+};
 
 Object.defineProperty(Array.prototype, 'chunk_inefficient', {
     value: function(chunkSize) {
@@ -92,6 +103,7 @@ export default {
       switch (j.type){
         case 'qa': return questionAnswerFormat(j);
         case 'kk': return knockKnockFormat(j);
+        default: return otherFormat(j);
       }
     })
     .chunk_inefficient(vnode.state.columns)
