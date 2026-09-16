@@ -10,6 +10,7 @@ export default {
                 m('li', m('a[href="/css_variables/"][target="_blank"]', 'CSS Variables')),
                 m('li', m('a[href="/blog-title-generator"][target="_blank"]', 'Blog Title Generator')),
                 m('li', m('a[href="/query-copier/?foo=bar&baz"][target="_blank"]', 'Query Copier')),
+                m('li', m('a[href=/audhd]', {oncreate: m.route.link}, 'AuDHD Questions'),),
                 m('li', m('a[href="https://knownanywhere.com"][target="_blank"]', 'Known Anywhere')),
                 m('li', m('a[href="https://github.com/mvndaai/mvndaai.github.io"][target="_blank"]', 'Repo: mvndaai.com (this site)')),
                 m('li', m('a[href=/jokes]', {oncreate: m.route.link}, 'Jokes'),),

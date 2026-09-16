@@ -5,6 +5,7 @@ import resume from '/mithril/routes/resume.js';
 import bio from '/mithril/routes/bio.js';
 import jokes from '/mithril/routes/jokes.js';
 import history from '/mithril/routes/history.js';
+import audhd from '/mithril/routes/audhd.js';
 
 m.route(document.body, "/", {
   '/': {view: _ => m(frame, m(home))},
@@ -12,4 +13,5 @@ m.route(document.body, "/", {
   '/bio': {view: _ => m(frame, m(bio))},
   '/jokes': {view: _ => m(frame, m(jokes))},
   '/history': {view: _ => m(frame, m(history))},
+  '/audhd': {view: _ => m(frame, m(audhd))},
 });
