@@ -10,6 +10,8 @@ const questions = {
         'When you are at work does your relationship stay the same or decrease over time?',
         'Do you listen to audio faster than 1.0x?',
         'Do you need to know the answer to questions or is it okay to just move on?',
+        'Do you have insomnia?',
+        'Does putting something in a "safe place" make it impossible to find?',
         {q: 'Do you use captions when watching TV?' }, //TODO remember name
         {q: 'Do you say "What?" but then answer before the person has responded?', name: 'Delayed Audio Processing'},
         'Is there a song always playing in the back of your head?',
