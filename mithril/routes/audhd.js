@@ -1,19 +1,19 @@
 const questions = {
     ADHD: [
-        {q: 'Do you prefer to eat one food for months and then one day it is disgusting?', name: 'Hyper Focus food'},
+        { q: 'Do you prefer to eat one food for months and then one day it is disgusting?', name: 'Hyper Focus food' },
         'Do you drag your fingers on the wall?',
         'Do you prefer to not sit on a chair? Like a counter, the floor, or in a chair without legs on the groud.',
-        {q: 'Do you overreact when you feel rejected?', name: 'RSD (Rejection Sensitivity Disphoria)'},
-        {q: 'Do you buy everything for something you are excited about, then never want to touch it again after a few months?', name: 'Hyper Focus Hobby'},
-        {q: 'Do things left in the same place for more than a few days disapper until something points it out?', name: "Object Permanence"},
+        { q: 'Do you overreact when you feel rejected?', name: 'RSD (Rejection Sensitivity Disphoria)' },
+        { q: 'Do you buy everything for something you are excited about, then never want to touch it again after a few months?', name: 'Hyper Focus Hobby' },
+        { q: 'Do things left in the same place for more than a few days disapper until something points it out?', name: "Object Permanence" },
         'Do you forget that friends exist?',
         'When you are at work does your relationship stay the same or decrease over time?',
         'Do you listen to audio faster than 1.0x?',
         'Do you need to know the answer to questions or is it okay to just move on?',
         'Do you have insomnia?',
         'Does putting something in a "safe place" make it impossible to find?',
-        {q: 'Do you use captions when watching TV?' }, //TODO remember name
-        {q: 'Do you say "What?" but then answer before the person has responded?', name: 'Delayed Audio Processing'},
+        { q: 'Do you use captions when watching TV?' }, //TODO remember name
+        { q: 'Do you say "What?" but then answer before the person has responded?', name: 'Delayed Audio Processing' },
         'Is there a song always playing in the back of your head?',
         'Do you share similar stories when someone is telling you something in order to emphasize? Some people might ask why you try "one up" their story.',
     ],
@@ -28,11 +28,10 @@ const questions = {
         'Do you have something that you love so much some people think it is your personality? Trains? Bugs?',
         'Do you think "small talk" is unncessary?',
         'Do you want things changed not just for you but to make the world better for the next person?',
-        {q: 'Is it hard to know what your feeling are?', name: 'Alexithymia'},
+        { q: 'Is it hard to know what your feeling are?', name: 'Alexithymia' },
         'Do you have watch people and try to figure out the rules before jumping in?',
         'Do you practice conversations in andvance?',
         'Is it easier to quote something to express your feelings than to use your own words?',
-
     ],
     'AudHD (Either)': [
         'Do you have light sensitivity?'
@@ -40,34 +39,56 @@ const questions = {
 };
 
 export default {
-    view: (vnode) => m('.columns', [
-        m('.column', [
-            m('h1.title', 'AuDHD Questions'),
-            m('h2.subtitle', "These are the questions I ask about ADHD or Autism. Some you wouldn't expect."),
-            Object.entries(questions).map(([k, vs]) => {
-                return m('fieldset', {style:'margin: 10px 0; padding: 5px 10px;'}, [
-                    m('legend', k),
-                    vs.map((v, i) => {
-                        if (typeof v === 'string') {
-                            v = {q: v};
-                        }
-                        return m('', [
-                            m('label', [
-                                m('input', {type:'checkbox', style:"margin-right: 10px;"}, ),
-                                v.q,
-                                v.name && m('em', ' ' + v.name),
-                            ]),
-                        ]);
-                    })
-                ]);
-            }),
-            m('', [
-                'For more information check out my ',
-                m('a', {href: 'https://mvndaai.blogspot.com/2024/11/audhd.html'}, 'blog post'),
-                '.',
+    view: (vnode) => {
+        // Initialize state if it doesn't exist on the vnode/state object
+        if (!vnode.state.answers) {
+            vnode.state.answers = {};
+            Object.keys(questions).forEach(category => {
+                vnode.state.answers[category] = {};
+            });
+        }
+
+        return m('.columns', [
+            m('.column', [
+                m('h1.title', 'AuDHD Questions'),
+                m('h2.subtitle', "These are the questions I ask about ADHD or Autism. Some you wouldn't expect."),
+                Object.entries(questions).map(([k, vs]) => {
+                    const categoryAnswers = vnode.state.answers[k] || {};
+                    const checkedCount = Object.values(categoryAnswers).filter(Boolean).length;
+                    const totalCount = vs.length;
+
+                    return m('fieldset', { style: 'margin: 10px 0; padding: 5px 10px;' }, [
+                        m('legend', k),
+                        vs.map((v, i) => {
+                            if (typeof v === 'string') {
+                                v = { q: v };
+                            }
+                            return m('', [
+                                m('label', [
+                                    m('input', {
+                                        type: 'checkbox',
+                                        style: 'margin-right: 10px;',
+                                        checked: !!categoryAnswers[i],
+                                        onclick: (e) => {
+                                            vnode.state.answers[k][i] = e.target.checked;
+                                        }
+                                    }),
+                                    v.q,
+                                    v.name && m('em', ' ' + v.name),
+                                ])
+                            ]);
+                        }),
+                        m('div', { style: 'margin-top: 10px; font-weight: bold; font-size: 0.9em;' }, 
+                            `Score: ${checkedCount}/${totalCount}`
+                        )
+                    ]);
+                }),
+                m('', [
+                    'For more information check out my ',
+                    m('a', { href: 'https://mvndaai.blogspot.com/2024/11/audhd.html' }, 'blog post'),
+                    '.',
+                ])
             ])
-        ]),
-
-    ]),
+        ]);
+    }
 };
-
